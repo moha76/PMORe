@@ -1,0 +1,103 @@
+@layer legacy {
+.m08-card .mor-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.m08-editor {
+  display: grid;
+  gap: 17px;
+  margin-top: 15px;
+}
+
+.m08-list {
+  display: grid;
+  gap: 9px;
+}
+
+.m08-list h3 {
+  margin: 0 0 3px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.m08-list-row {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.m08-list-row input,
+.m08-field input,
+.m08-field select {
+  min-width: 0;
+  width: 100%;
+  min-height: 41px;
+  padding: 9px 11px;
+  border: 1px solid #cbdbe7;
+  border-radius: 8px;
+  background: white;
+  color: #17334b;
+  font: inherit;
+  font-size: 14px;
+}
+
+.m08-list-row input:focus,
+.m08-field input:focus,
+.m08-field select:focus {
+  outline: 2px solid #80bfdc;
+  outline-offset: 1px;
+}
+
+.m08-list-row button,
+.m08-actions button {
+  border: 1px solid #bdd5e4;
+  border-radius: 8px;
+  background: #fff;
+  color: #155477;
+  padding: 8px 13px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.m08-list-row .m08-remove {
+  color: #a33742;
+  border-color: #edc7cb;
+  font-size: 21px;
+}
+
+.m08-field {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.m08-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 6px;
+}
+
+.m08-actions .m08-primary {
+  background: #126184;
+  color: white;
+  border-color: #126184;
+}
+
+.m08-card button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.m08-error {
+  color: #ad3445;
+  font-size: 13px;
+  margin: 0;
+}
+
+}

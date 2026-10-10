@@ -1,0 +1,1127 @@
+@layer legacy {
+
+/* ==========================================================
+   COMPANY V33 — SMART FOCUS
+   ========================================================== */
+
+.mor-company-focus-target {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+  transition:
+    outline-color 0.3s ease,
+    outline-offset 0.3s ease;
+}
+
+
+/* M06_PREMIUM_V1 — COMPANY WORKSPACE */
+
+.mor-company-premium {
+  --company-ink: #162941;
+  --company-muted: #60738c;
+  --company-accent: #0d668e;
+  --company-border: #dce5ef;
+  --company-surface: #ffffff;
+  color: var(--company-ink);
+}
+
+.mor-company-premium .mor-workspace-hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--company-border);
+  border-radius: 22px;
+  padding: clamp(20px, 3vw, 36px);
+  background: linear-gradient(
+    125deg, #f4f9fc 0%, #ffffff 63%, #eaf3fa 100%
+  );
+  box-shadow: 0 10px 32px rgba(22, 41, 65, .055);
+}
+
+.mor-company-premium .mor-workspace-hero h1 {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -.035em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.mor-company-premium .mor-workspace-eyebrow {
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .115em;
+  color: #276481;
+}
+
+.mor-company-premium-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 28px;
+  margin: 24px 0 14px;
+  background: #142e4a;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(15, 41, 69, .12);
+}
+
+.mor-company-premium-intro h2 {
+  margin: 7px 0 8px;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 750;
+  letter-spacing: -.025em;
+  color: #fff;
+}
+
+.mor-company-premium-intro p {
+  margin: 0;
+  max-width: 660px;
+  font-size: .9rem;
+  line-height: 1.65;
+  color: #cbd9e6;
+}
+
+.mor-company-premium-kicker {
+  font-size: .67rem;
+  letter-spacing: .13em;
+  font-weight: 800;
+  color: #90d6f0;
+}
+
+.mor-company-premium-section-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  min-height: 88px;
+  padding: 14px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 14px;
+  background: rgba(255,255,255,.07);
+}
+
+.mor-company-premium-section-count strong {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-company-premium-section-count span {
+  margin-top: 7px;
+  font-size: .73rem;
+  color: #cbd9e6;
+}
+
+.mor-company-premium .mor-workspace-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  padding: 9px;
+  margin-bottom: 24px;
+  border: 1px solid var(--company-border);
+  border-radius: 16px;
+  background: #f5f8fc;
+}
+
+.mor-company-premium .mor-workspace-tabs > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 15px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #40576e;
+  font-size: .85rem;
+  font-weight: 650;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease,
+    box-shadow .18s ease;
+}
+
+.mor-company-premium .mor-workspace-tabs > button:hover {
+  background: #e5eff8;
+  color: #163a59;
+}
+
+.mor-company-premium .mor-workspace-tabs > button.active {
+  background: #ffffff;
+  color: #07577b;
+  border-color: #d6e4f0;
+  box-shadow: 0 3px 12px rgba(16, 51, 82, .09);
+}
+
+.mor-company-premium .mor-workspace-tabs > button:focus-visible {
+  outline: 3px solid #4ba5d3;
+  outline-offset: 2px;
+}
+
+.mor-company-premium .mor-workspace-tabs > button span {
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: #e1edf5;
+  color: #235777;
+  font-size: .72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 760px) {
+  .mor-company-premium-intro {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .mor-company-premium-section-count {
+    min-width: 66px;
+    min-height: 70px;
+  }
+
+  .mor-company-premium .mor-workspace-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    justify-content: flex-start;
+  }
+
+  .mor-company-premium .mor-workspace-tabs > button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .mor-company-premium-section-count {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mor-company-premium .mor-workspace-tabs > button {
+    transition: none;
+  }
+}
+
+/* M06_PREMIUM_V2 — FINITION VISUELLE */
+
+.mor-company-premium .mor-company-premium-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 18px 0 12px;
+  padding: 19px 24px;
+  background: linear-gradient(110deg, #123351, #195675);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.mor-company-premium .mor-company-premium-intro h2 {
+  color: #ffffff;
+  margin: 5px 0 5px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.mor-company-premium .mor-company-premium-intro p {
+  color: #d8e7f1;
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.mor-company-premium .mor-company-premium-kicker {
+  color: #97d8ee;
+  font-size: .67rem;
+  font-weight: 750;
+  letter-spacing: .11em;
+}
+
+.mor-company-premium .mor-company-premium-section-count {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 90px;
+  padding: 13px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 12px;
+}
+
+.mor-company-premium .mor-company-premium-section-count strong {
+  color: #ffffff;
+  font-size: 1.55rem;
+}
+
+.mor-company-premium .mor-company-premium-section-count span {
+  color: #d8e7f1;
+  font-size: .72rem;
+}
+
+.mor-company-premium .mor-workspace-tabs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+  margin: 0 0 20px;
+  border-radius: 14px;
+  border: 1px solid #dce6ef;
+  background: #eef3f8;
+}
+
+.mor-company-premium .mor-workspace-tabs > button {
+  min-height: 40px;
+  padding: 9px 13px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #3b566e;
+  font-size: .83rem;
+  font-weight: 650;
+}
+
+.mor-company-premium .mor-workspace-tabs > button.active {
+  background: #ffffff;
+  color: #075779;
+  border-color: #d9e5ef;
+  box-shadow: 0 3px 10px rgba(20,50,75,.08);
+}
+
+.mor-company-premium
+.mor-matching-readiness button,
+.mor-company-premium
+.mor-workspace-overview button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.mor-company-premium
+.mor-matching-readiness button:not(:disabled) {
+  border-radius: 8px;
+  padding: 8px 13px;
+  border: 1px solid #c9dce9;
+  background: #ffffff;
+  color: #12577a;
+  font-size: .82rem;
+  font-weight: 700;
+  transition: background .15s ease;
+}
+
+.mor-company-premium
+.mor-matching-readiness button:not(:disabled):hover {
+  background: #e7f2f8;
+}
+
+@media (max-width: 760px) {
+  .mor-company-premium .mor-company-premium-intro {
+    padding: 17px;
+  }
+
+  .mor-company-premium .mor-workspace-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .mor-company-premium .mor-workspace-tabs > button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .mor-company-premium
+  .mor-company-premium-section-count {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mor-company-premium
+  .mor-matching-readiness button {
+    transition: none;
+  }
+}
+
+
+/* M06_PREMIUM_V3_COMPACT */
+
+.mor-company-premium .mor-workspace-hero {
+  padding: 22px 26px ;
+  background: #ffffff ;
+  border: 1px solid #dbe5ef ;
+  border-radius: 16px ;
+  box-shadow: 0 4px 18px rgba(19,48,75,.045) ;
+  color: #17304a ;
+}
+
+.mor-company-premium .mor-workspace-hero h1,
+.mor-company-premium .mor-workspace-hero strong {
+  color: #17304a ;
+}
+
+.mor-company-premium .mor-workspace-hero p,
+.mor-company-premium .mor-workspace-hero span:not(
+  .mor-workspace-eyebrow
+) {
+  color: #60758a;
+}
+
+.mor-company-premium .mor-workspace-hero
+.mor-workspace-eyebrow {
+  color: #156888 ;
+}
+
+.mor-company-premium .mor-workspace-hero
+.mor-profile-completion strong {
+  color: #17304a ;
+}
+
+.mor-company-premium .mor-workspace-hero
+.mor-profile-completion span {
+  color: #60758a ;
+}
+
+.mor-company-premium .mor-workspace-tabs {
+  margin-top: 16px ;
+  margin-bottom: 18px ;
+  border: 1px solid #dbe5ef;
+  background: #f2f6fa;
+}
+
+.mor-company-premium .mor-workspace-tabs > button {
+  color: #34536d;
+}
+
+.mor-company-premium .mor-workspace-tabs
+> button.active {
+  color: #075f84;
+  background: #ffffff;
+}
+
+.mor-company-premium .mor-company-alerts {
+  margin-block: 14px ;
+  padding: 16px 20px ;
+}
+
+.mor-company-premium .mor-company-alerts
+.mor-section-title h2 {
+  font-size: 1rem;
+}
+
+.mor-company-premium .mor-company-alerts
+.mor-section-title {
+  margin-bottom: 10px;
+}
+
+.mor-company-premium .mor-company-alert {
+  padding: 12px 15px;
+}
+
+@media (max-width: 700px) {
+  .mor-company-premium .mor-workspace-hero {
+    padding: 18px ;
+  }
+}
+
+
+/* M06_READABILITY_V1 */
+
+.mor-company-premium {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Increase legibility without modifying data or events. */
+.mor-company-premium h2 {
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 1.3;
+}
+
+.mor-company-premium h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.mor-company-premium p,
+.mor-company-premium label,
+.mor-company-premium input,
+.mor-company-premium select,
+.mor-company-premium textarea {
+  font-size: max(13px, 0.875rem);
+}
+
+.mor-company-premium button {
+  font-size: max(12px, 0.8125rem);
+  min-height: 35px;
+}
+
+.mor-company-premium input,
+.mor-company-premium select,
+.mor-company-premium textarea {
+  min-height: 38px;
+}
+
+/* Keep the navigation distinct from body content. */
+.mor-company-premium .mor-workspace-tabs {
+  position: relative;
+  gap: 8px;
+}
+
+.mor-company-premium .mor-workspace-tabs > button {
+  min-height: 42px;
+  font-size: 13px;
+}
+
+/* Prevent micro-text in metadata. */
+.mor-company-premium small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Constrain content width on ultrawide screens. */
+.mor-company-premium
+.mor-workspace-overview,
+.mor-company-premium
+.mor-settings-page {
+  max-width: 1440px;
+  width: 100%;
+}
+
+/* General readability for repeated cards. */
+.mor-company-premium article {
+  min-width: 0;
+}
+
+.mor-company-premium article p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .mor-company-premium {
+    font-size: 14px;
+  }
+
+  .mor-company-premium button {
+    min-height: 40px;
+  }
+}
+
+
+/* M06_FONT_FIX_V1 — TYPOGRAPHIE LISIBLE */
+
+/* Texte principal */
+.mor-company-premium {
+  font-size: 15px ;
+  line-height: 1.55 ;
+}
+
+/* Titres */
+.mor-company-premium h1 {
+  font-size: 28px ;
+  line-height: 1.25 ;
+}
+
+.mor-company-premium h2 {
+  font-size: 20px ;
+  line-height: 1.35 ;
+}
+
+.mor-company-premium h3 {
+  font-size: 17px ;
+  line-height: 1.4 ;
+}
+
+/* Texte courant */
+.mor-company-premium p,
+.mor-company-premium li,
+.mor-company-premium label,
+.mor-company-premium td,
+.mor-company-premium dd {
+  font-size: 15px ;
+  line-height: 1.55 ;
+}
+
+/* Informations secondaires */
+.mor-company-premium small,
+.mor-company-premium dt {
+  font-size: 13px ;
+  line-height: 1.5 ;
+}
+
+/* Métadonnées, valeurs et intitulés */
+.mor-company-premium article strong,
+.mor-company-premium article b {
+  font-size: 16px ;
+  line-height: 1.4 ;
+}
+
+/* Boutons et navigation */
+.mor-company-premium button,
+.mor-company-premium .mor-workspace-tabs > button {
+  font-size: 14px ;
+  line-height: 1.35 ;
+  min-height: 40px;
+}
+
+/* Champs de saisie */
+.mor-company-premium input,
+.mor-company-premium select,
+.mor-company-premium textarea {
+  font-size: 15px ;
+  line-height: 1.5 ;
+}
+
+/* Les composants internes utilisent parfois
+   leurs propres tailles en px. */
+.mor-company-premium article span,
+.mor-company-premium article div {
+  font-size: max(14px, 0.875rem);
+}
+
+/* Garder les badges secondaires relativement compacts */
+.mor-company-premium .mor-workspace-eyebrow,
+.mor-company-premium .mor-company-premium-kicker {
+  font-size: 12px ;
+  line-height: 1.5 ;
+}
+
+@media (max-width: 760px) {
+  .mor-company-premium h1 {
+    font-size: 24px ;
+  }
+
+  .mor-company-premium h2 {
+    font-size: 19px ;
+  }
+}
+
+
+/* M06_COMPANY_ICONS_V1 */
+.mor-company-premium .mor-workspace-tabs > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 14px ;
+}
+
+.mor-company-premium .mor-workspace-tabs > button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke-width: 1.9;
+  color: #57748b;
+}
+
+.mor-company-premium .mor-workspace-tabs > button.active svg {
+  color: #086d96;
+}
+
+
+/* M06_FIVE_SPACES_V1 */
+
+.mor-company-five-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.mor-company-five-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 64px;
+  padding: 13px 12px;
+  border: 1px solid #d9e5ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2d4b65;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mor-company-five-nav button.active {
+  background: #123b58;
+  color: #ffffff;
+  border-color: #123b58;
+}
+
+.mor-company-five-nav button svg {
+  flex-shrink: 0;
+}
+
+.mor-company-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0 0 18px;
+}
+
+.mor-company-subnav button {
+  padding: 10px 16px;
+  min-height: 42px;
+  background: #f0f5fa;
+  border: 1px solid #d6e3ed;
+  border-radius: 9px;
+  color: #36536d;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mor-company-subnav button.active {
+  background: #dcecf6;
+  border-color: #91bfd7;
+  color: #125577;
+  font-weight: 750;
+}
+
+.mor-company-five-nav button:focus-visible,
+.mor-company-subnav button:focus-visible {
+  outline: 3px solid #53a2cf;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1100px) {
+  .mor-company-five-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .mor-company-five-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* M07_FINANCE_POSITION_V2 */
+
+@media (min-width: 1100px) {
+  .mor-workspace-overview {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1.45fr)
+      minmax(340px, 1fr);
+    align-items: start;
+    gap: 20px;
+  }
+
+  .mor-workspace-overview > * {
+    min-width: 0;
+  }
+
+  .mor-workspace-overview > :not(.mor-finance-aside) {
+    grid-column: 1;
+  }
+
+  .mor-workspace-overview > .mor-finance-aside {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    align-self: start;
+  }
+
+  .mor-finance-aside .mor-finance-values {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .mor-finance-aside {
+    width: 100%;
+  }
+}
+
+
+/* M07_3_BALANCED_LAYOUT */
+
+/*
+ * Colonne gauche :
+ * Matching, Activités, Documents.
+ *
+ * Colonne droite :
+ * Finances, Capacités opérationnelles.
+ */
+
+@media (min-width: 1100px) {
+  .mor-company-premium .mor-workspace-overview {
+    grid-template-columns:
+      minmax(0, 1.45fr)
+      minmax(340px, 1fr);
+    align-items: start;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > #company-finance {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > .mor-document-readiness {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+
+/* M07_4_OPERATIONAL_POSITION */
+
+@media (min-width: 1100px) {
+  .mor-company-premium
+  .mor-workspace-overview > .mor-operational-aside {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > #company-finance {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > .mor-document-readiness {
+    grid-column: 1;
+  }
+}
+
+/* M07_6_FINAL_COMPANY_GRID */
+
+@media (min-width: 1100px) {
+
+  .mor-company-premium .mor-workspace-overview {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1.45fr)
+      minmax(340px, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .mor-company-premium .mor-workspace-overview > * {
+    min-width: 0;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > .mor-matching-readiness {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > .mor-activities-position {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > .mor-document-readiness {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > #company-finance {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > #company-capabilities {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .mor-company-premium
+  #company-finance .mor-finance-values {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+}
+
+@media (max-width: 1099px) {
+
+  .mor-company-premium .mor-workspace-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .mor-company-premium
+  .mor-workspace-overview > * {
+    grid-column: auto;
+    grid-row: auto;
+    min-width: 0;
+  }
+}
+
+
+/* M07_8_THREE_COLUMNS */
+
+.mor-company-premium .mor-workspace-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+  width: 100%;
+}
+
+.mor-company-premium .mor-overview-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.mor-company-premium .mor-overview-column > * {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.mor-company-premium .mor-overview-column
+.mor-finance-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  .mor-company-premium .mor-workspace-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mor-company-premium .mor-overview-column-three {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .mor-company-premium .mor-workspace-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mor-company-premium .mor-overview-column-three {
+    grid-column: auto;
+  }
+}
+
+/* MOR THREE COLUMNS — FINAL LAYOUT OVERRIDE */
+
+@media (min-width: 1201px) {
+
+  .mor-company-premium .mor-workspace-overview {
+    display: grid ;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) ;
+    width: 100% ;
+    max-width: none ;
+    gap: 18px ;
+    align-items: start ;
+  }
+
+  .mor-company-premium .mor-overview-column {
+    display: flex ;
+    flex-direction: column ;
+    gap: 18px ;
+    grid-column: auto ;
+    grid-row: auto ;
+    width: 100% ;
+    min-width: 0 ;
+  }
+
+  .mor-company-premium .mor-overview-column > * {
+    width: 100% ;
+    min-width: 0 ;
+    grid-column: auto ;
+    grid-row: auto ;
+    margin: 0 ;
+  }
+}
+
+
+/* MOR THREE COLUMNS — FINAL LAYOUT OVERRIDE */
+
+@media (min-width: 1201px) {
+
+  .mor-company-premium .mor-workspace-overview {
+    display: grid ;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) ;
+    width: 100% ;
+    max-width: none ;
+    gap: 18px ;
+    align-items: start ;
+  }
+
+  .mor-company-premium .mor-overview-column {
+    display: flex ;
+    flex-direction: column ;
+    gap: 18px ;
+    grid-column: auto ;
+    grid-row: auto ;
+    width: 100% ;
+    min-width: 0 ;
+  }
+
+  .mor-company-premium .mor-overview-column > * {
+    width: 100% ;
+    min-width: 0 ;
+    grid-column: auto ;
+    grid-row: auto ;
+    margin: 0 ;
+  }
+}
+
+
+
+/* M09 PREMIUM KPI — scoped to the 5 company indicators */
+.mor-workspace-kpis.mor-kpis-m09 {
+  display: grid ;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) ;
+  gap: 16px ;
+  align-items: stretch ;
+  margin: 18px 0 24px ;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > .mor-kpi-premium {
+  --kpi-accent: #137897;
+  --kpi-soft: #eaf5fa;
+  position: relative;
+  display: flex ;
+  flex-direction: column ;
+  align-items: flex-start ;
+  justify-content: flex-start ;
+  min-width: 0;
+  min-height: 168px;
+  padding: 20px ;
+  border: 1px solid #dfE9f0 ;
+  border-radius: 17px ;
+  background: #fff ;
+  box-shadow: 0 7px 22px rgba(22,54,80,.055) ;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > .mor-kpi-premium::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: var(--kpi-accent);
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > .mor-kpi-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(22,54,80,.11) ;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 .mor-kpi-premium-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  flex: none;
+  margin-bottom: 12px;
+  border-radius: 11px;
+  color: var(--kpi-accent);
+  background: var(--kpi-soft);
+}
+
+.mor-workspace-kpis.mor-kpis-m09 .mor-kpi-premium-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > article > span {
+  display: block;
+  margin: 0 0 5px;
+  color: #526a80 ;
+  font-size: 12px ;
+  font-weight: 750 ;
+  text-transform: uppercase;
+  letter-spacing: .055em;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > article > strong {
+  display: block;
+  margin: 0;
+  color: #14334d ;
+  font-size: clamp(29px, 2.5vw, 38px) ;
+  line-height: 1.12 ;
+  font-weight: 850 ;
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-workspace-kpis.mor-kpis-m09 > article > small {
+  display: block;
+  margin-top: 6px;
+  color: #718496 ;
+  font-size: 12px ;
+  font-weight: 500 ;
+}
+
+.mor-kpis-m09 .mor-kpi-theme-2 {
+  --kpi-accent: #775bb6 ;
+  --kpi-soft: #f0ebfa ;
+}
+
+.mor-kpis-m09 .mor-kpi-theme-3 {
+  --kpi-accent: #ae7624 ;
+  --kpi-soft: #fff2df ;
+}
+
+.mor-kpis-m09 .mor-kpi-theme-4 {
+  --kpi-accent: #287d67 ;
+  --kpi-soft: #e4f5ee ;
+}
+
+.mor-kpis-m09 .mor-kpi-theme-5 {
+  --kpi-accent: #466aaf ;
+  --kpi-soft: #eaf0fc ;
+}
+
+@media (max-width: 1100px) {
+  .mor-workspace-kpis.mor-kpis-m09 {
+    grid-template-columns: repeat(3, minmax(0,1fr)) ;
+  }
+}
+
+@media (max-width: 650px) {
+  .mor-workspace-kpis.mor-kpis-m09 {
+    grid-template-columns: repeat(2, minmax(0,1fr)) ;
+    gap: 10px ;
+  }
+
+  .mor-workspace-kpis.mor-kpis-m09 > .mor-kpi-premium {
+    min-height: 150px;
+    padding: 15px ;
+  }
+}
+
+@media (max-width: 360px) {
+  .mor-workspace-kpis.mor-kpis-m09 {
+    grid-template-columns: minmax(0,1fr) ;
+  }
+}
+
+}

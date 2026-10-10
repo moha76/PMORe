@@ -1,0 +1,152 @@
+@layer legacy {
+/* MOR Premium V5 — Scoped foundations */
+
+.mor-v5,
+.mor-v5 *,
+.mor-v5 *::before,
+.mor-v5 *::after {
+  box-sizing: border-box;
+}
+
+.mor-v5 {
+  min-width: 0;
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+.mor-v5 button,
+.mor-v5 input,
+.mor-v5 select,
+.mor-v5 textarea {
+  font: inherit;
+}
+
+.mor-v5 button {
+  cursor: pointer;
+}
+
+.mor-v5 button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.mor-v5 :is(
+  button,
+  input,
+  select,
+  textarea,
+  a
+):focus-visible {
+  outline: 3px solid #8aaddb;
+  outline-offset: 2px;
+}
+
+.mor-v5 .mor-card {
+  min-width: 0;
+  background: var(--mor-surface);
+  border: 1px solid var(--mor-border);
+  border-radius: var(--mor-radius-lg);
+  box-shadow: var(--mor-shadow);
+}
+
+.mor-v5 .mor-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--mor-control-height);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--mor-radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color .15s ease,
+    border-color .15s ease;
+}
+
+.mor-v5 .mor-btn-primary {
+  background: var(--mor-primary);
+  color: #fff;
+}
+
+.mor-v5 .mor-btn-primary:hover {
+  background: var(--mor-primary-hover);
+}
+
+.mor-v5 .mor-btn-secondary {
+  background: var(--mor-surface);
+  color: var(--mor-text);
+  border-color: var(--mor-border);
+}
+
+.mor-v5 .mor-btn-secondary:hover {
+  background: var(--mor-surface-alt);
+  border-color: var(--mor-border-strong);
+}
+
+.mor-v5 .mor-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--mor-control-height);
+  padding: 8px 12px;
+  background: var(--mor-surface);
+  color: var(--mor-text);
+  border: 1px solid var(--mor-border-strong);
+  border-radius: var(--mor-radius-md);
+}
+
+.mor-v5 .mor-input::placeholder {
+  color: var(--mor-text-muted);
+}
+
+.mor-v5 .mor-input:disabled {
+  background: var(--mor-surface-alt);
+  opacity: .7;
+}
+
+.mor-v5 .mor-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.mor-v5 .mor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.mor-v5 .mor-table th,
+.mor-v5 .mor-table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--mor-border);
+}
+
+.mor-v5 .mor-table th {
+  background: var(--mor-surface-alt);
+  color: var(--mor-text-secondary);
+  font-weight: 650;
+}
+
+.mor-v5 .mor-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.mor-v5 .mor-muted {
+  color: var(--mor-text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mor-v5 *,
+  .mor-v5 *::before,
+  .mor-v5 *::after {
+    transition-duration: 0.01ms ;
+    animation-duration: 0.01ms ;
+  }
+}
+
+}

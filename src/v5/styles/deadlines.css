@@ -1,0 +1,51 @@
+@layer legacy {
+.mor-v5 .mor-v5-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.mor-v5 .mor-v5-deadline > svg {
+  flex: 0 0 15px;
+}
+
+.mor-v5 .mor-v5-deadline > span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mor-v5 .mor-v5-deadline strong {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mor-v5 .mor-v5-deadline small {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mor-v5 .mor-v5-deadline.normal {
+  color: var(--mor-text-secondary);
+}
+
+.mor-v5 .mor-v5-deadline.urgent {
+  color: #b42332;
+  background: #fff0f1;
+  border: 1px solid #f5cbd0;
+  border-radius: 8px;
+  padding: 7px 9px;
+}
+
+.mor-v5 .mor-v5-deadline.unknown {
+  color: var(--mor-text-muted);
+}
+
+.mor-v5 .mor-v5-deadline.expired {
+  color: #a12b32;
+}
+
+}

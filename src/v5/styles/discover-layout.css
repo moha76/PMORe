@@ -1,0 +1,219 @@
+@layer legacy {
+/* MOR V5 — Discover layout, isolated layer */
+
+.mor-v5 .mor-discover-filters-head {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mor-v5 .mor-v5-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid var(--mor-border-strong);
+  border-radius: 10px;
+  background: white;
+  color: var(--mor-primary);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.mor-v5 .mor-v5-filter-toggle:hover {
+  background: var(--mor-primary-soft);
+}
+
+.mor-v5 .mor-v5-filter-summary {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--mor-info);
+}
+
+/* Explicit 12-column grid */
+.mor-v5 .mor-discover-filters form.mor-discover-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 18px;
+  align-items: end;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--search {
+  grid-column: span 6;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--location {
+  grid-column: span 4;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--submit {
+  grid-column: span 2;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--matching {
+  grid-column: span 5;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--sort {
+  grid-column: span 5;
+}
+
+.mor-v5 .mor-discover-filter-grid .mor-filter-card--reset {
+  grid-column: span 2;
+}
+
+/* Compact mode */
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--location,
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--matching,
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--sort,
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--reset {
+  display: none;
+}
+
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--search {
+  grid-column: span 10;
+}
+
+.mor-v5 .mor-discover-filter-grid.is-collapsed
+.mor-filter-card--submit {
+  grid-column: span 2;
+}
+
+/* Consistent controls */
+.mor-v5 .mor-filter-card .mor-v5-input-shell,
+.mor-v5 .mor-filter-card .mor-v5-action-btn {
+  height: 44px;
+  min-height: 44px;
+}
+
+.mor-v5 .mor-filter-card {
+  min-width: 0;
+}
+
+.mor-v5 .mor-filter-card .mor-v5-field-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 18px;
+  margin-bottom: 7px;
+  line-height: 18px;
+}
+
+.mor-v5 .mor-filter-card--submit,
+.mor-v5 .mor-filter-card--reset {
+  align-self: end;
+}
+
+.mor-v5 .mor-filter-card--submit .mor-v5-action-btn,
+.mor-v5 .mor-filter-card--reset .mor-v5-action-btn {
+  white-space: nowrap;
+}
+
+/* Business data cells */
+.mor-v5 .mor-v5-data-cell {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.mor-v5 .mor-v5-data-cell > svg {
+  flex: 0 0 15px;
+  margin-top: 2px;
+  color: #7388a2;
+  stroke-width: 1.8;
+}
+
+.mor-v5 .mor-v5-data-cell > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.mor-v5 .mor-v5-money {
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-v5 .mor-v5-money > svg {
+  color: var(--mor-info);
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .mor-v5 .mor-discover-filters
+  form.mor-discover-filter-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--search {
+    grid-column: span 6;
+  }
+
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--location,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--matching,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--sort {
+    grid-column: span 4;
+  }
+
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--submit,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--reset {
+    grid-column: span 2;
+  }
+
+  .mor-v5 .mor-discover-filter-grid.is-collapsed
+  .mor-filter-card--search {
+    grid-column: span 4;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .mor-v5 .mor-discover-filters-head {
+    gap: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mor-v5 .mor-discover-filters
+  form.mor-discover-filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--search,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--location,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--submit,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--matching,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--sort,
+  .mor-v5 .mor-discover-filter-grid
+  .mor-filter-card--reset,
+  .mor-v5 .mor-discover-filter-grid.is-collapsed
+  .mor-filter-card--search {
+    grid-column: 1 / -1;
+  }
+}
+
+}

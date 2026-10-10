@@ -1,0 +1,3347 @@
+@layer legacy {
+.ao-workspace {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 30px 28px 70px;
+  color: #172033;
+}
+
+.ao-workspace button {
+  font: inherit;
+}
+
+.ao-workspace-back {
+  margin-bottom: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #43618f;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ao-workspace-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 25px;
+  border: 1px solid #e0e6ef;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.ao-workspace-reference {
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .07em;
+  color: #4166a4;
+}
+
+.ao-workspace-title h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(25px, 3vw, 37px);
+  line-height: 1.15;
+}
+
+.ao-workspace-title > p {
+  margin: 11px 0;
+  color: #68758b;
+  font-size: 16px;
+}
+
+.ao-workspace-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.ao-workspace-tags span {
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: #f3f6fa;
+  font-size: 11px;
+  color: #58667c;
+}
+
+.ao-workspace-decision {
+  min-width: 170px;
+  padding: 17px;
+  border-radius: 15px;
+  background: #f4f7fc;
+}
+
+.ao-workspace-decision span,
+.ao-workspace-decision small {
+  display: block;
+}
+
+.ao-workspace-decision span {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .09em;
+  color: #748198;
+}
+
+.ao-workspace-decision strong {
+  display: block;
+  margin: 6px 0;
+  font-size: 24px;
+}
+
+.ao-workspace-decision small {
+  color: #69768a;
+}
+
+.ao-workspace-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.ao-workspace-kpis article {
+  padding: 18px;
+  border: 1px solid #e0e6ef;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.ao-workspace-kpis span,
+.ao-workspace-kpis small {
+  display: block;
+}
+
+.ao-workspace-kpis span {
+  color: #728097;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.ao-workspace-kpis strong {
+  display: block;
+  margin: 7px 0 4px;
+  font-size: 25px;
+}
+
+.ao-workspace-kpis small {
+  color: #788497;
+}
+
+.ao-workspace-kpis .critical,
+.ao-workspace-kpis .expired,
+.match-blocking {
+  color: #b82e2e;
+}
+
+.ao-workspace-kpis .warning,
+.match-verify,
+.match-partial {
+  color: #b66b10;
+}
+
+.ao-workspace-kpis .success,
+.match-ok {
+  color: #21825d;
+}
+
+.ao-workspace-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 18px;
+  padding: 20px;
+  border: 1px solid #e0e6ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ao-flow-step {
+  position: relative;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.ao-flow-number {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+  border-radius: 50%;
+  background: #edf1f6;
+  color: #69758a;
+  font-weight: 850;
+}
+
+.ao-flow-step.done .ao-flow-number {
+  background: #dff4ea;
+  color: #18734e;
+}
+
+.ao-flow-step.active .ao-flow-number {
+  background: #245cbd;
+  color: #fff;
+}
+
+.ao-flow-step strong,
+.ao-flow-step span {
+  display: block;
+}
+
+.ao-flow-step span {
+  margin-top: 3px;
+  color: #8791a1;
+  font-size: 11px;
+}
+
+.ao-flow-line {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  left: 168px;
+  height: 2px;
+  background: #e4e8ef;
+}
+
+.ao-workspace-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: #173e80;
+  color: white;
+}
+
+.ao-workspace-action > div > span {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+  opacity: .75;
+}
+
+.ao-workspace-action h2 {
+  margin: 5px 0;
+}
+
+.ao-workspace-action p {
+  max-width: 720px;
+  margin: 0;
+  opacity: .8;
+}
+
+.ao-workspace-action button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 11px;
+  background: white;
+  color: #173e80;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ao-workspace-action button span {
+  margin-left: 8px;
+}
+
+.ao-workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(310px, .6fr);
+  gap: 18px;
+}
+
+.ao-workspace-panel {
+  border: 1px solid #e0e6ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ao-workspace-panel > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 21px 14px;
+}
+
+.ao-workspace-panel > header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #5070a6;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.ao-workspace-panel > header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.ao-decision-groups {
+  padding: 0 18px 20px;
+}
+
+.ao-decision-group {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #e7ebf1;
+  border-radius: 13px;
+}
+
+.ao-decision-group h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.ao-decision-group h3 b {
+  display: grid;
+  place-items: center;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  background: #edf1f6;
+}
+
+.ao-decision-group.blocking {
+  background: #fffafa;
+}
+
+.ao-decision-group.verify {
+  background: #fffdf8;
+}
+
+.ao-decision-group.success {
+  background: #f9fdfb;
+}
+
+.ao-check {
+  display: flex;
+  gap: 11px;
+  padding: 10px 0;
+  border-top: 1px solid #edf0f4;
+}
+
+.ao-check > span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  border-radius: 50%;
+  background: #eef2f7;
+  font-weight: 900;
+}
+
+.blocking .ao-check > span {
+  background: #ffe9e9;
+  color: #b92b2b;
+}
+
+.verify .ao-check > span {
+  background: #fff0d8;
+  color: #a85f08;
+}
+
+.success .ao-check > span {
+  background: #dff5ea;
+  color: #19724f;
+}
+
+.ao-check strong {
+  font-size: 13px;
+}
+
+.ao-check p {
+  margin: 4px 0 0;
+  color: #707c8f;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ao-summary-panel dl {
+  margin: 0;
+  padding: 0 21px;
+}
+
+.ao-summary-panel dl > div {
+  padding: 13px 0;
+  border-top: 1px solid #edf0f4;
+}
+
+.ao-summary-panel dt {
+  margin-bottom: 4px;
+  color: #7e8999;
+  font-size: 11px;
+}
+
+.ao-summary-panel dd {
+  margin: 0;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.ao-summary-panel > a {
+  display: block;
+  margin: 18px 21px 21px;
+  padding: 11px;
+  border-radius: 10px;
+  background: #edf3ff;
+  color: #2455ad;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.ao-details {
+  margin-top: 18px;
+}
+
+.ao-detail-links {
+  display: flex;
+  gap: 10px;
+  padding: 0 21px;
+}
+
+.ao-detail-links button {
+  padding: 10px 13px;
+  border: 1px solid #dce3ee;
+  border-radius: 10px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.ao-details-note {
+  margin: 14px 21px 21px;
+  color: #778396;
+  font-size: 12px;
+}
+
+.ao-workspace-state {
+  padding: 50px;
+  text-align: center;
+}
+
+.ao-workspace-state.error {
+  color: #b02d2d;
+}
+
+@media (max-width: 1000px) {
+  .ao-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-workspace-kpis {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ao-workspace {
+    padding: 20px 13px 50px;
+  }
+
+  .ao-workspace-hero {
+    flex-direction: column;
+  }
+
+  .ao-workspace-kpis,
+  .ao-workspace-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-flow-step {
+    min-height: 55px;
+  }
+
+  .ao-flow-line {
+    display: none;
+  }
+
+  .ao-workspace-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ao-detail-links {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   WORKSPACE V2 — PREPARATION
+   ========================================================= */
+
+.ao-preparation {
+  margin-bottom: 18px;
+  border: 1px solid #e0e6ef;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ao-preparation-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 17px;
+}
+
+.ao-preparation-head > div:first-child > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #5070a6;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.ao-preparation-head h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.ao-preparation-head p {
+  margin: 5px 0 0;
+  color: #748096;
+}
+
+.ao-preparation-progress {
+  min-width: 105px;
+  text-align: right;
+}
+
+.ao-preparation-progress strong {
+  display: block;
+  font-size: 31px;
+}
+
+.ao-preparation-progress span {
+  color: #7d8899;
+  font-size: 11px;
+}
+
+.ao-preparation-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 22px 18px;
+}
+
+.ao-preparation-stats article {
+  padding: 13px 15px;
+  border-radius: 12px;
+  background: #f5f7fa;
+}
+
+.ao-preparation-stats article strong,
+.ao-preparation-stats article span {
+  display: block;
+}
+
+.ao-preparation-stats article strong {
+  margin-bottom: 3px;
+  font-size: 22px;
+}
+
+.ao-preparation-stats article span {
+  color: #717e92;
+  font-size: 11px;
+}
+
+.ao-preparation-stats .danger {
+  background: #fff1f1;
+}
+
+.ao-preparation-stats .danger strong {
+  color: #b72e2e;
+}
+
+.ao-preparation-stats .warning {
+  background: #fff7e9;
+}
+
+.ao-preparation-stats .warning strong {
+  color: #a7600b;
+}
+
+.ao-preparation-stats .success {
+  background: #edf9f3;
+}
+
+.ao-preparation-stats .success strong {
+  color: #19724f;
+}
+
+.ao-preparation-list {
+  border-top: 1px solid #edf0f4;
+}
+
+.ao-preparation-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.ao-preparation-row:last-child {
+  border-bottom: 0;
+}
+
+.ao-preparation-status > span {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #edf1f6;
+  color: #667388;
+  font-weight: 900;
+}
+
+.ao-preparation-row.status-blocking
+.ao-preparation-status > span {
+  background: #ffe5e5;
+  color: #b62929;
+}
+
+.ao-preparation-row.status-verify
+.ao-preparation-status > span,
+.ao-preparation-row.status-unknown
+.ao-preparation-status > span,
+.ao-preparation-row.status-partial
+.ao-preparation-status > span {
+  background: #fff0d8;
+  color: #a85f08;
+}
+
+.ao-preparation-row.status-ok
+.ao-preparation-status > span {
+  background: #dbf3e7;
+  color: #19724f;
+}
+
+.ao-preparation-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ao-preparation-title strong {
+  font-size: 14px;
+}
+
+.ao-preparation-title > span {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #f1f4f8;
+  color: #697589;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ao-preparation-content > p {
+  margin: 5px 0 0;
+  color: #6e7a8d;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ao-preparation-business {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 9px;
+}
+
+.ao-preparation-business div {
+  min-width: 180px;
+}
+
+.ao-preparation-business small {
+  display: block;
+  margin-bottom: 2px;
+  color: #8a94a4;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+
+.ao-preparation-business strong {
+  font-size: 11px;
+}
+
+.ao-preparation-row > button {
+  padding: 8px 10px;
+  border: 1px solid #d7dfeb;
+  border-radius: 9px;
+  background: #fff;
+  color: #2855a6;
+  font-weight: 750;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ao-preparation-row > button span {
+  margin-left: 5px;
+}
+
+.ao-preparation-row.status-ok > button {
+  opacity: .55;
+}
+
+.ao-preparation-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 17px 22px;
+  background: #fafbfd;
+}
+
+.ao-preparation-footer strong,
+.ao-preparation-footer span {
+  display: block;
+}
+
+.ao-preparation-footer strong {
+  font-size: 12px;
+}
+
+.ao-preparation-footer span {
+  margin-top: 2px;
+  color: #778396;
+  font-size: 11px;
+}
+
+.ao-preparation-footer button {
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 9px;
+  background: #2458af;
+  color: #fff;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ao-preparation-empty {
+  padding: 30px;
+  text-align: center;
+  color: #768296;
+}
+
+
+@media (max-width: 800px) {
+  .ao-preparation-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .ao-preparation-row {
+    grid-template-columns:
+      36px minmax(0, 1fr);
+  }
+
+  .ao-preparation-row > button {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .ao-preparation-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   WORKSPACE V3 — ACTIONS HUMAINES
+   ========================================================= */
+
+.ao-preparation-row {
+  align-items: start;
+}
+
+.ao-workspace-action-control {
+  width: 330px;
+  max-width: 100%;
+}
+
+.ao-workspace-action-control
+.dossier-human-action {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #e1e6ee;
+  border-radius: 12px;
+  background: #f9fbfd;
+}
+
+.ao-workspace-action-control
+.dossier-human-action-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ao-workspace-action-control
+.dossier-human-action-head span {
+  display: block;
+  margin-bottom: 2px;
+  color: #7b8798;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+
+.ao-workspace-action-control
+.dossier-human-action-head strong {
+  font-size: 12px;
+}
+
+.ao-workspace-action-control
+.dossier-human-action-head small {
+  color: #5573a6;
+  font-size: 10px;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons button {
+  padding: 7px 5px;
+  border: 1px solid #dce3ec;
+  border-radius: 7px;
+  background: #fff;
+  color: #59677b;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons button.active {
+  border-color: #3566bb;
+  background: #eaf1ff;
+  color: #214f9d;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons button.active.ready {
+  border-color: #5da988;
+  background: #e3f5ec;
+  color: #19704d;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons button.active.impossible {
+  border-color: #d17777;
+  background: #fff0f0;
+  color: #a92d2d;
+}
+
+.ao-workspace-action-control
+.dossier-action-buttons button.active.in_progress {
+  border-color: #dca14e;
+  background: #fff5e5;
+  color: #995b0c;
+}
+
+.ao-workspace-action-control
+.dossier-action-notes {
+  margin-top: 8px;
+}
+
+.ao-workspace-action-control
+.dossier-action-notes label {
+  display: block;
+  margin-bottom: 4px;
+  color: #758195;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.ao-workspace-action-control
+.dossier-action-notes textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 7px 8px;
+  border: 1px solid #dfe5ed;
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+  font-size: 10px;
+}
+
+.ao-workspace-action-control
+.dossier-action-notes > button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 7px;
+  border: 0;
+  border-radius: 7px;
+  background: #edf3fc;
+  color: #2858a8;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ao-preparation-lot {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: #f1f4f8;
+  color: #718097;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+  .ao-preparation-row {
+    grid-template-columns:
+      42px minmax(0, 1fr);
+  }
+
+  .ao-workspace-action-control {
+    grid-column: 2;
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   WORKSPACE V4 — SOUMISSION
+   ========================================================= */
+
+.ao-submission {
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid #e0e6ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ao-submission-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 17px;
+}
+
+.ao-submission-head > div:first-child > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #5070a6;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.ao-submission-head h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.ao-submission-head p {
+  margin: 5px 0 0;
+  color: #748096;
+}
+
+.ao-submission-state {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #f0f2f6;
+  color: #68758a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ao-submission-state.submitted {
+  background: #dff5ea;
+  color: #19724f;
+}
+
+.ao-submission-form {
+  border-top: 1px solid #edf0f4;
+}
+
+.ao-submission-readiness {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 18px 22px;
+  background: #fafbfd;
+}
+
+.ao-submission-readiness > div {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e6eaf0;
+}
+
+.ao-submission-readiness span,
+.ao-submission-readiness strong {
+  display: block;
+}
+
+.ao-submission-readiness span {
+  margin-bottom: 4px;
+  color: #7b8798;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.ao-submission-readiness strong {
+  font-size: 20px;
+}
+
+.ao-submission-readiness .danger {
+  color: #b32e2e;
+}
+
+.ao-submission-fields {
+  display: grid;
+  grid-template-columns:
+    minmax(230px, .65fr)
+    minmax(320px, 1.35fr);
+  gap: 16px;
+  padding: 20px 22px 12px;
+}
+
+.ao-submission-fields label > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #69768a;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.ao-submission-fields input,
+.ao-submission-fields textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  background: #fff;
+  font: inherit;
+}
+
+.ao-submission-fields textarea {
+  resize: vertical;
+}
+
+.ao-submission-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 8px 22px 20px;
+}
+
+.ao-submission-footer p {
+  margin: 3px 0;
+  color: #748095;
+  font-size: 11px;
+}
+
+.ao-submission-footer p.danger {
+  color: #a92d2d;
+  font-weight: 700;
+}
+
+.ao-submission-footer > button {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 9px;
+  background: #1f56b4;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ao-submission-footer > button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.ao-submission-error {
+  margin: 0 22px 20px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fff0f0;
+  color: #a92d2d;
+  font-size: 12px;
+}
+
+.ao-submission-success {
+  display: grid;
+  grid-template-columns:
+    52px minmax(0, 1fr) auto;
+  gap: 17px;
+  align-items: start;
+  padding: 22px;
+  border-top: 1px solid #e4eee9;
+  background: #f8fdfb;
+}
+
+.ao-submission-success-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #dff5ea;
+  color: #19724f;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.ao-submission-success-main > span {
+  display: block;
+  color: #418068;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .09em;
+}
+
+.ao-submission-success-main h3 {
+  margin: 4px 0 13px;
+}
+
+.ao-submission-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.ao-submission-meta small,
+.ao-submission-meta strong {
+  display: block;
+}
+
+.ao-submission-meta small {
+  margin-bottom: 3px;
+  color: #768396;
+  font-size: 9px;
+}
+
+.ao-submission-meta strong {
+  font-size: 12px;
+}
+
+.ao-submission-cancel {
+  padding: 9px 11px;
+  border: 1px solid #e1c8c8;
+  border-radius: 9px;
+  background: #fff;
+  color: #a33333;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .ao-submission-readiness,
+  .ao-submission-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-submission-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ao-submission-success {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Workspace — préparation verrouillée après soumission */
+
+.ao-preparation-readonly {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #dcebe4;
+  border-radius: 10px;
+  background: #f7fcf9;
+}
+
+.ao-preparation-readonly > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #dff5e9;
+  color: #19724f;
+  font-weight: 900;
+}
+
+.ao-preparation-readonly strong,
+.ao-preparation-readonly small {
+  display: block;
+}
+
+.ao-preparation-readonly strong {
+  color: #285c49;
+  font-size: 11px;
+}
+
+.ao-preparation-readonly small {
+  margin-top: 2px;
+  color: #75847d;
+  font-size: 10px;
+}
+
+
+/* WORKSPACE V5 — SUIVI / RESULTAT */
+
+.ao-outcome {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #e1e5ea;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.ao-outcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ao-outcome-eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: #718096;
+}
+
+.ao-outcome-header h2 {
+  margin: 0;
+}
+
+.ao-outcome-state {
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  background: #f1f3f5;
+}
+
+.ao-outcome-state.won {
+  background: #e8f7ef;
+  color: #176c49;
+}
+
+.ao-outcome-state.lost {
+  background: #fff0f0;
+  color: #a33b3b;
+}
+
+.ao-outcome-state.cancelled {
+  background: #f3f3f3;
+  color: #666;
+}
+
+.ao-outcome-choices {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ao-outcome-choices button {
+  padding: 9px 15px;
+  border: 1px solid #d9dee5;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.ao-outcome-choices button.active {
+  border-color: #1f5eff;
+  background: #edf3ff;
+}
+
+.ao-outcome-fields {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ao-outcome-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ao-outcome-fields span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ao-outcome-fields input,
+.ao-outcome-fields textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9dee5;
+  border-radius: 9px;
+  font: inherit;
+}
+
+.ao-outcome-notes {
+  grid-column: 1 / -1;
+}
+
+.ao-outcome-save {
+  margin-top: 16px;
+  padding: 11px 17px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.ao-outcome-result {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ao-outcome-result-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ao-outcome-result-main strong {
+  font-size: 18px;
+}
+
+.ao-outcome-result-main small {
+  color: #5d6875;
+}
+
+.ao-outcome-delete {
+  align-self: flex-start;
+  padding: 9px 13px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  background: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .ao-outcome-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-outcome-notes {
+    grid-column: auto;
+  }
+
+  .ao-outcome-result {
+    flex-direction: column;
+  }
+}
+
+
+/* V8 — verrouillage annulation soumission */
+
+.ao-submission-outcome-lock {
+  max-width: 310px;
+  padding: 12px 14px;
+  border: 1px solid #d9e2ef;
+  border-radius: 11px;
+  background: #f7f9fc;
+}
+
+.ao-submission-outcome-lock span {
+  display: block;
+  margin-bottom: 4px;
+  color: #34435c;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ao-submission-outcome-lock p {
+  margin: 0;
+  color: #6f7b8d;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+
+/* V9 — modification résultat */
+
+.ao-outcome-edit {
+  min-width: 220px;
+}
+
+.ao-outcome-edit > summary {
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border: 1px solid #bfd0ea;
+  border-radius: 9px;
+  background: #f5f8fd;
+  color: #28599f;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ao-outcome-edit > summary::-webkit-details-marker {
+  display: none;
+}
+
+.ao-outcome-edit[open] {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.ao-outcome-edit[open] > summary {
+  margin-bottom: 12px;
+}
+
+.ao-outcome-edit-form {
+  padding: 16px;
+  border: 1px solid #dfe6f0;
+  border-radius: 12px;
+  background: #f9fbfe;
+}
+
+.ao-outcome-result {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .ao-outcome-edit {
+    width: 100%;
+  }
+}
+
+
+/* V21 — Focus automatique sur l'étape active */
+
+.ao-workspace-decision,
+.ao-preparation,
+.ao-submission,
+.ao-outcome {
+  scroll-margin-top: 90px;
+}
+
+
+/* V22 — Mise en évidence temporaire de l'étape active */
+
+.workflow-focus {
+  position: relative;
+  outline: 3px solid rgba(55, 106, 190, 0.22);
+  outline-offset: 4px;
+  box-shadow:
+    0 0 0 8px rgba(55, 106, 190, 0.07),
+    0 18px 45px rgba(34, 63, 104, 0.10);
+  transition:
+    outline-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.workflow-focus::before {
+  content: "ÉTAPE À TRAITER";
+  position: absolute;
+  z-index: 3;
+  top: -11px;
+  right: 18px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #315f9f;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  pointer-events: none;
+}
+
+
+/* V23 — Barre Étape actuelle / Prochaine action */
+
+.ao-workspace-actionbar {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, .7fr)
+    minmax(260px, 1.6fr)
+    auto;
+  gap: 18px;
+  align-items: center;
+  margin: 18px 0 20px;
+  padding: 16px 18px;
+  border: 1px solid #dfe5ee;
+  border-left: 4px solid #55729d;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow:
+    0 6px 20px rgba(32, 49, 72, .06);
+}
+
+.ao-workspace-actionbar-stage,
+.ao-workspace-actionbar-next {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ao-workspace-actionbar-stage > span,
+.ao-workspace-actionbar-next > span {
+  color: #80899a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.ao-workspace-actionbar-stage > strong {
+  color: #26374d;
+  font-size: 16px;
+}
+
+.ao-workspace-actionbar-next > strong {
+  color: #27364b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.ao-workspace-actionbar-next small {
+  color: #707887;
+  font-size: 11px;
+}
+
+.ao-workspace-actionbar-next small.danger {
+  color: #a53232;
+  font-weight: 700;
+}
+
+.ao-workspace-actionbar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #315f9f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ao-workspace-actionbar-button:hover {
+  filter: brightness(.95);
+}
+
+.ao-workspace-actionbar.stage-blocked {
+  border-left-color: #ba3d3d;
+}
+
+.ao-workspace-actionbar.stage-ready {
+  border-left-color: #278153;
+}
+
+.ao-workspace-actionbar.stage-submitted {
+  border-left-color: #356ca9;
+}
+
+.ao-workspace-actionbar.stage-won {
+  border-left-color: #278153;
+}
+
+.ao-workspace-actionbar.stage-lost,
+.ao-workspace-actionbar.stage-cancelled,
+.ao-workspace-actionbar.stage-expired {
+  border-left-color: #8a929e;
+}
+
+@media (max-width: 850px) {
+  .ao-workspace-actionbar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ao-workspace-actionbar-button {
+    width: 100%;
+  }
+}
+
+/* ==========================================================
+   WORKSPACE V28 — BUSINESS COMPARISON
+   ========================================================== */
+
+.ao-business-comparison {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.ao-business-comparison-block {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(248, 250, 252, 0.92);
+}
+
+.ao-business-comparison-block small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.68;
+}
+
+.ao-business-comparison-block p,
+.ao-business-comparison-block strong {
+  display: block;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ao-business-comparison-block.requirement {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.company {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.conclusion {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.action {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.impact {
+  background: rgba(248, 250, 252, 0.55);
+}
+
+@media (min-width: 900px) {
+  .ao-business-comparison {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ao-business-comparison-block.conclusion,
+  .ao-business-comparison-block.action,
+  .ao-business-comparison-block.impact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================
+   WORKSPACE V29 — DECISION SUMMARY
+   ========================================================== */
+
+.ao-check-business-summary {
+  display: grid;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.ao-check-business-summary > div {
+  padding-top: 7px;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.ao-check-business-summary small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.58;
+}
+
+.ao-check-business-summary p,
+.ao-check-business-summary strong {
+  display: block;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.ao-check-business-summary .conclusion strong {
+  font-weight: 700;
+}
+
+.ao-check-summary-fallback {
+  margin-top: 7px;
+}
+
+/* ==========================================================
+   WORKSPACE V30 — DECISION SYNTHESIS
+   ========================================================== */
+
+.ao-decision-summary {
+  display: grid;
+  gap: 16px;
+}
+
+.ao-decision-summary-counts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.ao-decision-summary-counts > div {
+  padding: 12px 8px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.ao-decision-summary-counts strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.ao-decision-summary-counts span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ao-decision-summary-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ao-decision-summary-list > div {
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.ao-decision-summary-list span,
+.ao-decision-recommendation span,
+.ao-decision-context span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.6;
+}
+
+.ao-decision-summary-list strong {
+  display: block;
+  line-height: 1.4;
+}
+
+.ao-decision-summary-list small {
+  display: block;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.ao-decision-recommendation {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.ao-decision-recommendation strong {
+  display: block;
+  line-height: 1.5;
+}
+
+.ao-decision-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ao-decision-context > div {
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: rgba(248, 250, 252, 0.6);
+}
+
+.ao-decision-context strong {
+  display: block;
+  font-size: 0.82rem;
+}
+
+/* ==========================================================
+   WORKSPACE V31 — PRIORITY RECOMMENDATION
+   ========================================================== */
+
+.ao-decision-recommendation {
+  position: relative;
+  overflow: hidden;
+}
+
+.ao-decision-recommendation::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: currentColor;
+  opacity: 0.75;
+}
+
+.ao-decision-recommendation strong {
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================
+   WORKSPACE V32 — ACTIONABLE PRIORITIES
+   ========================================================== */
+
+.ao-priority-actions {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.ao-priority-action {
+  display: grid;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.ao-priority-action small {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.55;
+}
+
+.ao-priority-action strong {
+  font-size: 0.84rem;
+}
+
+.ao-priority-action p {
+  margin: 4px 0 0;
+  font-size: 0.79rem;
+  line-height: 1.4;
+}
+
+.ao-priority-action button {
+  justify-self: start;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .ao-priority-action {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+/* ==========================================================
+   MOR WORKSPACE V34 — CLEAR DECISION WORKSPACE
+   ========================================================== */
+
+/* ---------- MAIN TWO-COLUMN WORKSPACE ---------- */
+
+.ao-v34-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(330px, 390px);
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.ao-v34-primary,
+.ao-v34-rail {
+  min-width: 0;
+}
+
+.ao-v34-rail {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+
+/* ---------- REMOVE OLD DUPLICATE DECISION PANEL ---------- */
+
+.ao-v34-rail
+.ao-workspace-grid {
+  display: block;
+  margin: 0;
+}
+
+.ao-v34-rail
+.ao-workspace-grid
+> .ao-workspace-panel:not(.ao-summary-panel) {
+  display: none;
+}
+
+
+/* ---------- ANALYSIS PANEL ---------- */
+
+.ao-v34-primary
+.ao-preparation {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ao-v34-primary
+.ao-preparation-head {
+  padding: 20px 22px 16px;
+}
+
+.ao-v34-primary
+.ao-preparation-head h2 {
+  margin-top: 4px;
+  font-size: 1.28rem;
+}
+
+.ao-v34-primary
+.ao-preparation-head p {
+  max-width: 720px;
+  margin-top: 5px;
+}
+
+
+/* ---------- TOP ANALYSIS COUNTERS ---------- */
+
+.ao-v34-primary
+.ao-preparation-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 22px 16px;
+}
+
+.ao-v34-primary
+.ao-preparation-stats article {
+  min-height: 70px;
+  padding: 11px 12px;
+  border-radius: 11px;
+}
+
+.ao-v34-primary
+.ao-preparation-stats article strong {
+  font-size: 1.2rem;
+}
+
+
+/* ---------- CRITERIA LIST ---------- */
+
+.ao-v34-primary
+.ao-preparation-list {
+  display: grid;
+  gap: 10px;
+  padding: 12px 16px 18px;
+}
+
+.ao-v34-primary
+.ao-preparation-row {
+  display: grid;
+  grid-template-columns:
+    34px
+    minmax(0, 1fr);
+  gap: 10px 12px;
+  padding: 14px;
+  border-radius: 13px;
+  align-items: start;
+}
+
+.ao-v34-primary
+.ao-preparation-status {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ao-v34-primary
+.ao-preparation-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.ao-v34-primary
+.ao-preparation-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
+}
+
+.ao-v34-primary
+.ao-preparation-title > strong {
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.ao-v34-primary
+.ao-preparation-title > span {
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-size: 0.63rem;
+  font-weight: 800;
+}
+
+
+/* ---------- AO / COMPANY / GAP / ACTION / IMPACT ---------- */
+
+.ao-v34-primary
+.ao-business-comparison {
+  display: grid ;
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr)) ;
+  gap: 0 ;
+  margin-top: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block {
+  min-width: 0;
+  min-height: 96px;
+  padding: 10px 11px ;
+  margin: 0 ;
+  border: 0 ;
+  border-right:
+    1px solid rgba(15, 23, 42, 0.07) ;
+  border-radius: 0 ;
+  background: transparent ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block:last-child {
+  border-right: 0 ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block.requirement,
+.ao-v34-primary
+.ao-business-comparison-block.company,
+.ao-v34-primary
+.ao-business-comparison-block.conclusion,
+.ao-v34-primary
+.ao-business-comparison-block.action,
+.ao-v34-primary
+.ao-business-comparison-block.impact {
+  grid-column: auto ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  opacity: 0.62;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block p,
+.ao-v34-primary
+.ao-business-comparison-block strong {
+  font-size: 0.76rem;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- HUMAN PREPARATION CONTROL ---------- */
+
+.ao-v34-primary
+.ao-workspace-action-control {
+  grid-column: 2;
+  margin-top: 2px;
+}
+
+.ao-v34-primary
+.ao-workspace-action-control > * {
+  max-width: none;
+}
+
+
+/* ---------- RIGHT DECISION RAIL ---------- */
+
+.ao-v34-rail
+.ao-summary-panel {
+  margin: 0;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.ao-v34-rail
+.ao-summary-panel > header {
+  margin-bottom: 14px;
+}
+
+.ao-v34-rail
+.ao-summary-panel h2 {
+  font-size: 1.15rem;
+}
+
+.ao-v34-rail
+.ao-decision-summary {
+  gap: 14px;
+}
+
+
+/* ---------- SUMMARY COUNTERS ---------- */
+
+.ao-v34-rail
+.ao-decision-summary-counts {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-counts > div {
+  padding: 10px 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-counts strong {
+  font-size: 1.15rem;
+}
+
+
+/* ---------- RECOMMENDATION ---------- */
+
+.ao-v34-rail
+.ao-decision-recommendation {
+  padding: 13px;
+  border-radius: 11px;
+}
+
+.ao-v34-rail
+.ao-decision-recommendation > strong {
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+.ao-v34-rail
+.ao-priority-actions {
+  margin-top: 12px;
+  gap: 7px;
+}
+
+.ao-v34-rail
+.ao-priority-action {
+  padding: 10px;
+  grid-template-columns: 1fr;
+}
+
+.ao-v34-rail
+.ao-priority-action button {
+  width: 100%;
+  justify-self: stretch;
+}
+
+
+/* ---------- FINANCE/REFERENCE/PERSONNEL DETAILS ---------- */
+
+.ao-v34-rail
+.ao-decision-summary-list {
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list > div {
+  padding: 9px 10px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list strong {
+  font-size: 0.8rem;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list small {
+  font-size: 0.72rem;
+}
+
+
+/* ---------- INFORMATION CONTEXT ---------- */
+
+.ao-v34-rail
+.ao-decision-context {
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-context > div {
+  padding: 8px 9px;
+}
+
+
+/* ---------- SUBMISSION IN RIGHT RAIL ---------- */
+
+.ao-v34-rail
+.ao-submission {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ao-v34-rail
+.ao-submission-head {
+  padding: 16px;
+}
+
+.ao-v34-rail
+.ao-submission-head h2 {
+  font-size: 1.08rem;
+}
+
+.ao-v34-rail
+.ao-submission-head p {
+  font-size: 0.78rem;
+}
+
+.ao-v34-rail
+.ao-submission-form {
+  padding: 14px;
+}
+
+.ao-v34-rail
+.ao-submission-readiness {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-submission-readiness > div {
+  padding: 9px;
+}
+
+.ao-v34-rail
+.ao-submission-fields {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.ao-v34-rail
+.ao-submission-footer {
+  display: grid;
+  gap: 10px;
+}
+
+.ao-v34-rail
+.ao-submission-footer button {
+  width: 100%;
+}
+
+
+/* ---------- HERO/KPI VISUAL CLEANUP ---------- */
+
+.ao-workspace-hero {
+  border-radius: 18px;
+}
+
+.ao-workspace-kpis {
+  gap: 10px;
+}
+
+.ao-workspace-kpis article {
+  border-radius: 13px;
+}
+
+.ao-workspace-flow {
+  border-radius: 14px;
+}
+
+.ao-workspace-action {
+  border-radius: 15px;
+}
+
+
+/* ---------- DETAILS ---------- */
+
+.ao-details {
+  margin-top: 18px;
+  border-radius: 16px;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1180px) {
+
+  .ao-v34-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-v34-rail {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ao-v34-rail
+  .ao-workspace-grid,
+  .ao-v34-rail
+  .ao-submission {
+    min-width: 0;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 / -1 ;
+  }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 760px) {
+
+  .ao-v34-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-row {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+    padding: 11px;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns:
+      1fr ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block,
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 ;
+    border-right: 0 ;
+    border-bottom:
+      1px solid rgba(15, 23, 42, 0.07) ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block:last-child {
+    border-bottom: 0 ;
+  }
+
+  .ao-v34-rail
+  .ao-decision-context {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   MOR WORKSPACE V35.1 — NOTE CONFORTABLE EN DERNIERE LIGNE
+   ========================================================== */
+
+.ao-v34-primary .ao-preparation-row {
+  display: grid;
+  grid-template-columns:
+    34px
+    minmax(0, 1fr)
+    minmax(245px, 285px);
+  column-gap: 16px;
+  row-gap: 12px;
+  align-items: start;
+}
+
+/* contenu métier */
+.ao-v34-primary .ao-preparation-content {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+/* contrôle humain à droite */
+.ao-v34-primary .ao-workspace-action-control {
+  grid-column: 3;
+  grid-row: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Comparaison : privilégier la lisibilité des longues phrases
+   ---------------------------------------------------------- */
+
+.ao-v34-primary .ao-business-comparison {
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 1.15fr)
+    minmax(0, 1.25fr) ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block.action {
+  grid-column: 1 / 3 ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block.impact {
+  grid-column: 3 ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block {
+  min-height: auto;
+  padding: 12px 13px ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block p,
+.ao-v34-primary
+.ao-business-comparison-block strong {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* ----------------------------------------------------------
+   Le composant de suivi ne doit plus être tassé
+   ---------------------------------------------------------- */
+
+.ao-v34-primary
+.ao-workspace-action-control > * {
+  width: 100%;
+  max-width: none ;
+}
+
+/* boutons d'état plus confortables */
+.ao-v34-primary
+.ao-workspace-action-control button {
+  min-height: 36px;
+  white-space: normal;
+}
+
+/* textarea plus confortable */
+.ao-v34-primary
+.ao-workspace-action-control textarea {
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.45;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------
+   NOTE : dernière ligne, pleine largeur sous le critère
+   ---------------------------------------------------------- */
+
+/*
+   Le composant DossierActionControl reste intact.
+   On réorganise visuellement ses éléments pour que
+   la note prenne la largeur disponible.
+*/
+
+.ao-v34-primary
+.ao-workspace-action-control {
+  display: block;
+}
+
+/* zone de note */
+.ao-v34-primary
+.ao-workspace-action-control label {
+  display: block;
+  width: 100%;
+}
+
+/* bouton enregistrer */
+.ao-v34-primary
+.ao-workspace-action-control
+button:last-of-type {
+  width: 100%;
+  margin-top: 8px;
+  min-height: 38px;
+}
+
+/* ----------------------------------------------------------
+   Grand écran : permettre davantage de place au texte métier
+   ---------------------------------------------------------- */
+
+@media (min-width: 1450px) {
+  .ao-v34-primary .ao-preparation-row {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr)
+      270px;
+  }
+}
+
+/* ----------------------------------------------------------
+   Ecran moyen : le suivi descend sous l'analyse
+   ---------------------------------------------------------- */
+
+@media (max-width: 1280px) {
+  .ao-v34-primary .ao-preparation-row {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr);
+  }
+
+  .ao-v34-primary .ao-workspace-action-control {
+    grid-column: 2;
+    grid-row: 2;
+    max-width: none;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.requirement {
+    grid-column: 1 ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.company {
+    grid-column: 2 ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.conclusion,
+  .ao-v34-primary
+  .ao-business-comparison-block.action,
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 / -1 ;
+  }
+}
+
+/* ----------------------------------------------------------
+   Mobile
+   ---------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns: 1fr ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.requirement,
+  .ao-v34-primary
+  .ao-business-comparison-block.company,
+  .ao-v34-primary
+  .ao-business-comparison-block.conclusion,
+  .ao-v34-primary
+  .ao-business-comparison-block.action,
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 ;
+  }
+
+  .ao-v34-primary
+  .ao-workspace-action-control textarea {
+    min-height: 120px;
+  }
+}
+
+/* ==========================================================
+   MOR WORKSPACE V35.2 — NOTE FULL WIDTH
+   ========================================================== */
+
+/*
+  Structure desktop :
+
+  [ ? ] [ Analyse métier........................ ] [ Suivi statut ]
+        [ Exigence / Entreprise / Conclusion      ] [ 4 boutons    ]
+        [ Action / Impact                         ] [              ]
+
+        [ NOTE DE PRÉPARATION — pleine largeur                 ]
+        [ textarea confortable.................. ][ Enregistrer ]
+*/
+
+/* Le parent ne doit plus enfermer tout DossierActionControl
+   dans la petite colonne droite. */
+.ao-v34-primary .ao-workspace-action-control {
+  display: contents;
+}
+
+/* Les enfants directs deviennent participants de la grille
+   du critère. */
+.ao-v34-primary .dossier-human-action {
+  display: contents;
+}
+
+
+/* ==========================================================
+   SUIVI / STATUT — COLONNE DROITE
+   ========================================================== */
+
+.ao-v34-primary .dossier-human-action-head {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+
+  padding: 12px 12px 8px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.ao-v34-primary .dossier-human-action-head > div {
+  display: grid;
+  gap: 4px;
+}
+
+.ao-v34-primary .dossier-human-action-head span {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.ao-v34-primary .dossier-human-action-head strong {
+  font-size: 0.85rem;
+}
+
+
+/* Les quatre boutons restent ensemble à droite */
+
+.ao-v34-primary .dossier-action-buttons {
+  grid-column: 3;
+  grid-row: 1;
+
+  align-self: start;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 7px;
+
+  margin-top: 58px;
+  padding: 8px 11px 12px;
+
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.ao-v34-primary .dossier-action-buttons button {
+  width: 100%;
+  min-height: 38px;
+  padding: 7px 8px;
+
+  white-space: normal;
+  line-height: 1.2;
+}
+
+
+/* ==========================================================
+   NOTE — DERNIÈRE LIGNE PLEINE LARGEUR
+   ========================================================== */
+
+.ao-v34-primary .dossier-action-notes {
+  grid-column: 2 / 4;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+  grid-template-areas:
+    "label label"
+    "suggestion suggestion"
+    "textarea save";
+  gap: 7px 12px;
+
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 14px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.72);
+}
+
+
+/* Label */
+
+.ao-v34-primary .dossier-action-notes > label {
+  grid-area: label;
+
+  display: block;
+  margin: 0;
+
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+
+/* Proposition MOR */
+
+.ao-v34-primary .dossier-action-suggestion {
+  grid-area: suggestion;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.69rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+
+/* Grande zone de texte */
+
+.ao-v34-primary .dossier-action-notes textarea {
+  grid-area: textarea;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 105px;
+
+  padding: 11px 12px;
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  border-radius: 9px;
+}
+
+
+/* Enregistrer à droite de la note */
+
+.ao-v34-primary .dossier-action-notes > button {
+  grid-area: save;
+
+  align-self: end;
+
+  width: auto ;
+  min-width: 155px;
+  min-height: 42px;
+
+  margin: 0 ;
+  padding: 9px 14px;
+}
+
+
+/* ==========================================================
+   DISCLAIMER / ERREUR
+   ========================================================== */
+
+.ao-v34-primary .dossier-action-error {
+  grid-column: 2 / 4;
+  grid-row: 3;
+
+  margin: 0;
+}
+
+.ao-v34-primary .dossier-action-disclaimer {
+  grid-column: 2 / 4;
+  grid-row: 3;
+
+  margin: 0 4px;
+  padding-top: 1px;
+
+  font-size: 0.66rem;
+  line-height: 1.4;
+  opacity: 0.62;
+}
+
+
+/* ==========================================================
+   PLUS D'ESPACE POUR LES PHRASES MÉTIER
+   ========================================================== */
+
+.ao-v34-primary .ao-preparation-row {
+  grid-template-columns:
+    34px
+    minmax(0, 1fr)
+    minmax(250px, 285px);
+
+  column-gap: 16px;
+  row-gap: 11px;
+}
+
+.ao-v34-primary .ao-business-comparison {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1.15fr) ;
+}
+
+/* Action longue = 2 colonnes */
+.ao-v34-primary
+.ao-business-comparison-block.action {
+  grid-column: 1 / 3 ;
+}
+
+/* Impact plus court */
+.ao-v34-primary
+.ao-business-comparison-block.impact {
+  grid-column: 3 ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block p,
+.ao-v34-primary
+.ao-business-comparison-block strong {
+  font-size: 0.8rem;
+  line-height: 1.52;
+}
+
+
+/* ==========================================================
+   TABLETTE
+   ========================================================== */
+
+@media (max-width: 1220px) {
+
+  .ao-v34-primary .ao-preparation-row {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr);
+  }
+
+  .ao-v34-primary .ao-preparation-content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .ao-v34-primary .dossier-human-action-head {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .ao-v34-primary .dossier-action-buttons {
+    grid-column: 2;
+    grid-row: 2;
+
+    margin-top: 58px;
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .ao-v34-primary .dossier-action-notes {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .ao-v34-primary .dossier-action-error,
+  .ao-v34-primary .dossier-action-disclaimer {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+  .ao-v34-primary .dossier-action-buttons {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ao-v34-primary .dossier-action-notes {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "suggestion"
+      "textarea"
+      "save";
+  }
+
+  .ao-v34-primary .dossier-action-notes textarea {
+    min-height: 125px;
+  }
+
+  .ao-v34-primary .dossier-action-notes > button {
+    width: 100% ;
+  }
+}
+
+/* ==========================================================
+   MOR WORKSPACE V36 — PREPARATION LOCK BEFORE GO
+   ========================================================== */
+
+.ao-preparation-locked {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.82);
+}
+
+.ao-preparation-locked > span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.55;
+}
+
+.ao-preparation-locked > strong {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.ao-preparation-locked > p {
+  margin: 7px 0 0;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  opacity: 0.72;
+}
+
+/* ==========================================================
+   MOR WORKSPACE V38 — FULL WIDTH BEFORE GO
+   ========================================================== */
+
+/*
+  Quand aucun contrôle de préparation n'est affiché,
+  la partie métier utilise automatiquement toute la largeur.
+*/
+
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+) {
+  grid-template-columns:
+    34px
+    minmax(0, 1fr);
+}
+
+/* L'analyse métier occupe tout l'espace disponible */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-preparation-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Supprimer réellement la cellule vide */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-workspace-action-control {
+  display: none;
+}
+
+
+/* ==========================================================
+   COMPARAISON PLUS CONFORTABLE AVANT GO
+   ========================================================== */
+
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1.2fr) ;
+}
+
+/* Exigence */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block.requirement {
+  grid-column: 1 ;
+}
+
+/* Entreprise */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block.company {
+  grid-column: 2 ;
+}
+
+/* Conclusion */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block.conclusion {
+  grid-column: 3 ;
+}
+
+/* Action longue : 2/3 de la largeur */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block.action {
+  grid-column: 1 / 3 ;
+}
+
+/* Impact : dernier tiers */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block.impact {
+  grid-column: 3 ;
+}
+
+
+/* Plus d'air pour les phrases longues */
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block {
+  padding: 13px 15px ;
+}
+
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block p,
+.ao-v34-primary
+.ao-preparation-row:has(
+  .ao-workspace-action-control:empty
+)
+.ao-business-comparison-block strong {
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+
+/* MOBILE */
+@media (max-width: 760px) {
+
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison {
+    grid-template-columns: 1fr ;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison-block.requirement,
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison-block.company,
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison-block.conclusion,
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison-block.action,
+  .ao-v34-primary
+  .ao-preparation-row:has(
+    .ao-workspace-action-control:empty
+  )
+  .ao-business-comparison-block.impact {
+    grid-column: 1 ;
+  }
+}
+
+/* ==========================================================
+   WORKSPACE V46 — POST SUBMISSION FOLLOW-UP
+   ========================================================== */
+
+.ao-outcome-v46 {
+  border-width: 1px;
+  border-left-width: 5px;
+  padding: 22px;
+}
+
+.ao-outcome-v46.pending {
+  border-left-color: #315f9f;
+}
+
+.ao-outcome-v46.won {
+  border-left-color: #278153;
+}
+
+.ao-outcome-v46.lost {
+  border-left-color: #b94a4a;
+}
+
+.ao-outcome-v46.cancelled {
+  border-left-color: #8a929e;
+}
+
+
+/* HEADER */
+
+.ao-outcome-v46-header {
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ao-outcome-v46-title {
+  min-width: 0;
+}
+
+.ao-outcome-v46-title h2 {
+  margin: 3px 0 5px;
+  font-size: 1.35rem;
+}
+
+.ao-outcome-v46-title p {
+  margin: 0;
+  max-width: 720px;
+  color: #6b7480;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ao-outcome-v46-side {
+  display: flex;
+  align-items: center;
+}
+
+
+/* STATUS */
+
+.ao-outcome-v46 .ao-outcome-state {
+  min-width: 92px;
+  text-align: center;
+  padding: 8px 14px;
+}
+
+.ao-outcome-v46 .ao-outcome-state.pending {
+  color: #315f9f;
+  background: #edf3fb;
+}
+
+
+/* SUBMISSION SUMMARY */
+
+.ao-outcome-v46-submission {
+  display: grid;
+  grid-template-columns:
+    .75fr
+    1fr
+    1fr
+    1.4fr;
+  gap: 8px;
+
+  margin-bottom: 18px;
+  padding: 12px;
+
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.ao-outcome-v46-submission > div {
+  min-width: 0;
+  padding: 8px 10px;
+}
+
+.ao-outcome-v46-submission span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #7a8492;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .07em;
+}
+
+.ao-outcome-v46-submission strong {
+  display: block;
+
+  color: #26374d;
+  font-size: 12px;
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* RESULT */
+
+.ao-outcome-v46 .ao-outcome-result {
+  padding: 14px 16px;
+
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 12px;
+
+  background: #fff;
+}
+
+.ao-outcome-v46.won .ao-outcome-result {
+  background: rgba(240, 253, 244, .55);
+}
+
+.ao-outcome-v46.lost .ao-outcome-result {
+  background: rgba(254, 242, 242, .45);
+}
+
+.ao-outcome-v46.cancelled .ao-outcome-result {
+  background: rgba(248, 250, 252, .8);
+}
+
+
+/* FORM ACTIONS */
+
+.ao-outcome-v46 .ao-outcome-choices {
+  gap: 10px;
+}
+
+.ao-outcome-v46 .ao-outcome-choices button {
+  min-width: 105px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .ao-outcome-v46-submission {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+
+  .ao-outcome-v46-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ao-outcome-v46-submission {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-outcome-v46 .ao-outcome-choices {
+    flex-direction: column;
+  }
+
+  .ao-outcome-v46 .ao-outcome-choices button {
+    width: 100%;
+  }
+}
+
+
+}

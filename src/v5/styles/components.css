@@ -1,0 +1,197 @@
+@layer legacy {
+/* MOR Premium V5 — Shared components */
+
+.mor-v5 .mor-v5-metric {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 20px 22px;
+  background: var(--mor-surface);
+  border: 1px solid var(--mor-border);
+  border-radius: var(--mor-radius-lg);
+  box-shadow: var(--mor-shadow);
+  transition: border-color .15s ease,
+              transform .15s ease;
+}
+
+.mor-v5 .mor-v5-metric:hover {
+  border-color: var(--mor-border-strong);
+  transform: translateY(-1px);
+}
+
+.mor-v5 .mor-v5-metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mor-v5 .mor-v5-metric-label {
+  color: var(--mor-text-secondary);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.mor-v5 .mor-v5-metric-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--mor-primary);
+  background: var(--mor-primary-soft);
+}
+
+.mor-v5 .mor-v5-metric--success .mor-v5-metric-icon {
+  color: #176344;
+  background: #e7f5ed;
+}
+
+.mor-v5 .mor-v5-metric--warning .mor-v5-metric-icon {
+  color: #875b10;
+  background: #fff3d9;
+}
+
+.mor-v5 .mor-v5-metric--danger .mor-v5-metric-icon {
+  color: #a12b32;
+  background: #fce9e9;
+}
+
+.mor-v5 .mor-v5-metric-value {
+  font-size: clamp(27px, 2.5vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  font-weight: 750;
+  color: var(--mor-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-v5 .mor-v5-metric-description {
+  font-size: 11px;
+  color: var(--mor-text-muted);
+}
+
+.mor-v5 .mor-v5-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 205px;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.mor-v5 .mor-v5-status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.mor-v5 .mor-v5-status--success {
+  color: #176344;
+  background: #e7f5ed;
+}
+
+.mor-v5 .mor-v5-status--warning {
+  color: #875b10;
+  background: #fff3d9;
+}
+
+.mor-v5 .mor-v5-status--danger {
+  color: #a12b32;
+  background: #fce9e9;
+}
+
+.mor-v5 .mor-v5-status--neutral {
+  color: #536277;
+  background: #edf1f6;
+}
+
+.mor-v5 .mor-v5-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 22px;
+  border-top: 1px solid var(--mor-border);
+}
+
+.mor-v5 .mor-v5-pagination-summary {
+  margin: 0;
+  font-size: 12px;
+  color: var(--mor-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-v5 .mor-v5-pagination-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.mor-v5 .mor-v5-pagination-controls button {
+  display: grid;
+  place-items: center;
+  min-width: 35px;
+  height: 35px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--mor-text-secondary);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.mor-v5 .mor-v5-pagination-controls button:hover:not(:disabled) {
+  background: var(--mor-primary-soft);
+  color: var(--mor-primary);
+}
+
+.mor-v5 .mor-v5-pagination-controls button.active {
+  background: var(--mor-primary);
+  color: #fff;
+}
+
+.mor-v5 .mor-v5-pagination-controls button:disabled {
+  opacity: .4;
+}
+
+.mor-v5 .mor-v5-pagination-controls > span {
+  padding: 0 5px;
+  color: var(--mor-text-muted);
+}
+
+@media (max-width: 700px) {
+  .mor-v5 .mor-v5-metric {
+    padding: 14px;
+  }
+
+  .mor-v5 .mor-v5-metric-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mor-v5 .mor-v5-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mor-v5 .mor-v5-metric {
+    transition: none;
+  }
+}
+
+}

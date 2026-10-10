@@ -1,0 +1,808 @@
+@layer legacy {
+
+/* ==========================================================
+   WORKSPACE V28 — BUSINESS COMPARISON
+   ========================================================== */
+
+.ao-business-comparison {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.ao-business-comparison-block {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(248, 250, 252, 0.92);
+}
+
+.ao-business-comparison-block small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.68;
+}
+
+.ao-business-comparison-block p,
+.ao-business-comparison-block strong {
+  display: block;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ao-business-comparison-block.requirement {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.company {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.conclusion {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.action {
+  border-left: 4px solid currentColor;
+}
+
+.ao-business-comparison-block.impact {
+  background: rgba(248, 250, 252, 0.55);
+}
+
+@media (min-width: 900px) {
+  .ao-business-comparison {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ao-business-comparison-block.conclusion,
+  .ao-business-comparison-block.action,
+  .ao-business-comparison-block.impact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================
+   WORKSPACE V29 — DECISION SUMMARY
+   ========================================================== */
+
+.ao-check-business-summary {
+  display: grid;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.ao-check-business-summary > div {
+  padding-top: 7px;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.ao-check-business-summary small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.58;
+}
+
+.ao-check-business-summary p,
+.ao-check-business-summary strong {
+  display: block;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.ao-check-business-summary .conclusion strong {
+  font-weight: 700;
+}
+
+.ao-check-summary-fallback {
+  margin-top: 7px;
+}
+
+/* ==========================================================
+   WORKSPACE V30 — DECISION SYNTHESIS
+   ========================================================== */
+
+.ao-decision-summary {
+  display: grid;
+  gap: 16px;
+}
+
+.ao-decision-summary-counts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.ao-decision-summary-counts > div {
+  padding: 12px 8px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.ao-decision-summary-counts strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.ao-decision-summary-counts span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ao-decision-summary-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ao-decision-summary-list > div {
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.ao-decision-summary-list span,
+.ao-decision-recommendation span,
+.ao-decision-context span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.6;
+}
+
+.ao-decision-summary-list strong {
+  display: block;
+  line-height: 1.4;
+}
+
+.ao-decision-summary-list small {
+  display: block;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.ao-decision-recommendation {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.ao-decision-recommendation strong {
+  display: block;
+  line-height: 1.5;
+}
+
+.ao-decision-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ao-decision-context > div {
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: rgba(248, 250, 252, 0.6);
+}
+
+.ao-decision-context strong {
+  display: block;
+  font-size: 0.82rem;
+}
+
+/* ==========================================================
+   WORKSPACE V31 — PRIORITY RECOMMENDATION
+   ========================================================== */
+
+.ao-decision-recommendation {
+  position: relative;
+  overflow: hidden;
+}
+
+.ao-decision-recommendation::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: currentColor;
+  opacity: 0.75;
+}
+
+.ao-decision-recommendation strong {
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================
+   WORKSPACE V32 — ACTIONABLE PRIORITIES
+   ========================================================== */
+
+.ao-priority-actions {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.ao-priority-action {
+  display: grid;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.ao-priority-action small {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  opacity: 0.55;
+}
+
+.ao-priority-action strong {
+  font-size: 0.84rem;
+}
+
+.ao-priority-action p {
+  margin: 4px 0 0;
+  font-size: 0.79rem;
+  line-height: 1.4;
+}
+
+.ao-priority-action button {
+  justify-self: start;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .ao-priority-action {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+/* ==========================================================
+   MOR WORKSPACE V34 — CLEAR DECISION WORKSPACE
+   ========================================================== */
+
+/* ---------- MAIN TWO-COLUMN WORKSPACE ---------- */
+
+.ao-v34-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(330px, 390px);
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.ao-v34-primary,
+.ao-v34-rail {
+  min-width: 0;
+}
+
+.ao-v34-rail {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+
+/* ---------- REMOVE OLD DUPLICATE DECISION PANEL ---------- */
+
+.ao-v34-rail
+.ao-workspace-grid {
+  display: block;
+  margin: 0;
+}
+
+.ao-v34-rail
+.ao-workspace-grid
+> .ao-workspace-panel:not(.ao-summary-panel) {
+  display: none;
+}
+
+
+/* ---------- ANALYSIS PANEL ---------- */
+
+.ao-v34-primary
+.ao-preparation {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ao-v34-primary
+.ao-preparation-head {
+  padding: 20px 22px 16px;
+}
+
+.ao-v34-primary
+.ao-preparation-head h2 {
+  margin-top: 4px;
+  font-size: 1.28rem;
+}
+
+.ao-v34-primary
+.ao-preparation-head p {
+  max-width: 720px;
+  margin-top: 5px;
+}
+
+
+/* ---------- TOP ANALYSIS COUNTERS ---------- */
+
+.ao-v34-primary
+.ao-preparation-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 22px 16px;
+}
+
+.ao-v34-primary
+.ao-preparation-stats article {
+  min-height: 70px;
+  padding: 11px 12px;
+  border-radius: 11px;
+}
+
+.ao-v34-primary
+.ao-preparation-stats article strong {
+  font-size: 1.2rem;
+}
+
+
+/* ---------- CRITERIA LIST ---------- */
+
+.ao-v34-primary
+.ao-preparation-list {
+  display: grid;
+  gap: 10px;
+  padding: 12px 16px 18px;
+}
+
+.ao-v34-primary
+.ao-preparation-row {
+  display: grid;
+  grid-template-columns:
+    34px
+    minmax(0, 1fr);
+  gap: 10px 12px;
+  padding: 14px;
+  border-radius: 13px;
+  align-items: start;
+}
+
+.ao-v34-primary
+.ao-preparation-status {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ao-v34-primary
+.ao-preparation-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.ao-v34-primary
+.ao-preparation-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
+}
+
+.ao-v34-primary
+.ao-preparation-title > strong {
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.ao-v34-primary
+.ao-preparation-title > span {
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-size: 0.63rem;
+  font-weight: 800;
+}
+
+
+/* ---------- AO / COMPANY / GAP / ACTION / IMPACT ---------- */
+
+.ao-v34-primary
+.ao-business-comparison {
+  display: grid ;
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr)) ;
+  gap: 0 ;
+  margin-top: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block {
+  min-width: 0;
+  min-height: 96px;
+  padding: 10px 11px ;
+  margin: 0 ;
+  border: 0 ;
+  border-right:
+    1px solid rgba(15, 23, 42, 0.07) ;
+  border-radius: 0 ;
+  background: transparent ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block:last-child {
+  border-right: 0 ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block.requirement,
+.ao-v34-primary
+.ao-business-comparison-block.company,
+.ao-v34-primary
+.ao-business-comparison-block.conclusion,
+.ao-v34-primary
+.ao-business-comparison-block.action,
+.ao-v34-primary
+.ao-business-comparison-block.impact {
+  grid-column: auto ;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  opacity: 0.62;
+}
+
+.ao-v34-primary
+.ao-business-comparison-block p,
+.ao-v34-primary
+.ao-business-comparison-block strong {
+  font-size: 0.76rem;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- HUMAN PREPARATION CONTROL ---------- */
+
+.ao-v34-primary
+.ao-workspace-action-control {
+  grid-column: 2;
+  margin-top: 2px;
+}
+
+.ao-v34-primary
+.ao-workspace-action-control > * {
+  max-width: none;
+}
+
+
+/* ---------- RIGHT DECISION RAIL ---------- */
+
+.ao-v34-rail
+.ao-summary-panel {
+  margin: 0;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.ao-v34-rail
+.ao-summary-panel > header {
+  margin-bottom: 14px;
+}
+
+.ao-v34-rail
+.ao-summary-panel h2 {
+  font-size: 1.15rem;
+}
+
+.ao-v34-rail
+.ao-decision-summary {
+  gap: 14px;
+}
+
+
+/* ---------- SUMMARY COUNTERS ---------- */
+
+.ao-v34-rail
+.ao-decision-summary-counts {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-counts > div {
+  padding: 10px 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-counts strong {
+  font-size: 1.15rem;
+}
+
+
+/* ---------- RECOMMENDATION ---------- */
+
+.ao-v34-rail
+.ao-decision-recommendation {
+  padding: 13px;
+  border-radius: 11px;
+}
+
+.ao-v34-rail
+.ao-decision-recommendation > strong {
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+.ao-v34-rail
+.ao-priority-actions {
+  margin-top: 12px;
+  gap: 7px;
+}
+
+.ao-v34-rail
+.ao-priority-action {
+  padding: 10px;
+  grid-template-columns: 1fr;
+}
+
+.ao-v34-rail
+.ao-priority-action button {
+  width: 100%;
+  justify-self: stretch;
+}
+
+
+/* ---------- FINANCE/REFERENCE/PERSONNEL DETAILS ---------- */
+
+.ao-v34-rail
+.ao-decision-summary-list {
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list > div {
+  padding: 9px 10px;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list strong {
+  font-size: 0.8rem;
+}
+
+.ao-v34-rail
+.ao-decision-summary-list small {
+  font-size: 0.72rem;
+}
+
+
+/* ---------- INFORMATION CONTEXT ---------- */
+
+.ao-v34-rail
+.ao-decision-context {
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-decision-context > div {
+  padding: 8px 9px;
+}
+
+
+/* ---------- SUBMISSION IN RIGHT RAIL ---------- */
+
+.ao-v34-rail
+.ao-submission {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ao-v34-rail
+.ao-submission-head {
+  padding: 16px;
+}
+
+.ao-v34-rail
+.ao-submission-head h2 {
+  font-size: 1.08rem;
+}
+
+.ao-v34-rail
+.ao-submission-head p {
+  font-size: 0.78rem;
+}
+
+.ao-v34-rail
+.ao-submission-form {
+  padding: 14px;
+}
+
+.ao-v34-rail
+.ao-submission-readiness {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.ao-v34-rail
+.ao-submission-readiness > div {
+  padding: 9px;
+}
+
+.ao-v34-rail
+.ao-submission-fields {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.ao-v34-rail
+.ao-submission-footer {
+  display: grid;
+  gap: 10px;
+}
+
+.ao-v34-rail
+.ao-submission-footer button {
+  width: 100%;
+}
+
+
+/* ---------- HERO/KPI VISUAL CLEANUP ---------- */
+
+.ao-workspace-hero {
+  border-radius: 18px;
+}
+
+.ao-workspace-kpis {
+  gap: 10px;
+}
+
+.ao-workspace-kpis article {
+  border-radius: 13px;
+}
+
+.ao-workspace-flow {
+  border-radius: 14px;
+}
+
+.ao-workspace-action {
+  border-radius: 15px;
+}
+
+
+/* ---------- DETAILS ---------- */
+
+.ao-details {
+  margin-top: 18px;
+  border-radius: 16px;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1180px) {
+
+  .ao-v34-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-v34-rail {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ao-v34-rail
+  .ao-workspace-grid,
+  .ao-v34-rail
+  .ao-submission {
+    min-width: 0;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 / -1 ;
+  }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 760px) {
+
+  .ao-v34-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ao-v34-primary
+  .ao-preparation-row {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+    padding: 11px;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison {
+    grid-template-columns:
+      1fr ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block,
+  .ao-v34-primary
+  .ao-business-comparison-block.impact {
+    grid-column: 1 ;
+    border-right: 0 ;
+    border-bottom:
+      1px solid rgba(15, 23, 42, 0.07) ;
+  }
+
+  .ao-v34-primary
+  .ao-business-comparison-block:last-child {
+    border-bottom: 0 ;
+  }
+
+  .ao-v34-rail
+  .ao-decision-context {
+    grid-template-columns: 1fr;
+  }
+}
+
+}

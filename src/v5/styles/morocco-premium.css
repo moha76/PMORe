@@ -1,0 +1,250 @@
+@layer legacy {
+/* MOR Premium V5 — Moroccan personality & pagination polish */
+
+/* Header premium avec personnalité marocaine discrète */
+.mor-v5 .mor-discover-header {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 26px;
+  margin-bottom: 26px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.98) 0%,
+      rgba(245,248,252,0.98) 100%
+    );
+  border: 1px solid var(--mor-border);
+  border-radius: 18px;
+  box-shadow: var(--mor-shadow);
+}
+
+.mor-v5 .mor-discover-header::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  width: 240px;
+  height: 240px;
+  opacity: .12;
+  pointer-events: none;
+  background:
+    linear-gradient(45deg, transparent 46%, #1f5b8f 46%, #1f5b8f 54%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, #1f5b8f 46%, #1f5b8f 54%, transparent 54%);
+  background-size: 36px 36px;
+  transform: rotate(8deg);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 78%);
+}
+
+/* KPI grid plus riche */
+.mor-v5 .mor-discover-metrics {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 1350px) {
+  .mor-v5 .mor-discover-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .mor-v5 .mor-discover-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .mor-v5 .mor-discover-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pagination premium */
+.mor-v5 .mor-v5-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--mor-border);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(248,250,252,0.72) 0%,
+      rgba(255,255,255,0.98) 100%
+    );
+}
+
+.mor-v5 .mor-v5-pagination-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mor-v5 .mor-v5-pagination-summary {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mor-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.mor-v5 .mor-v5-pagination-page {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--mor-primary-soft);
+  color: var(--mor-primary);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mor-v5 .mor-v5-pagination-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mor-v5 .mor-v5-pagination-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--mor-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--mor-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    background-color .15s ease,
+    border-color .15s ease,
+    color .15s ease,
+    transform .15s ease;
+}
+
+.mor-v5 .mor-v5-pagination-controls button:hover:not(:disabled) {
+  background: var(--mor-primary-soft);
+  border-color: #b9cadf;
+  color: var(--mor-primary);
+  transform: translateY(-1px);
+}
+
+.mor-v5 .mor-v5-pagination-controls button.active {
+  background: var(--mor-primary);
+  border-color: var(--mor-primary);
+  color: #fff;
+}
+
+.mor-v5 .mor-v5-pagination-controls button:disabled {
+  opacity: .42;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mor-v5 .mor-v5-pagination-controls > span {
+  padding: 0 4px;
+  color: var(--mor-text-muted);
+  font-weight: 700;
+}
+
+/* Petite touche marocaine supplémentaire dans les KPI */
+.mor-v5 .mor-v5-metric {
+  position: relative;
+  overflow: hidden;
+}
+
+.mor-v5 .mor-v5-metric::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  right: -26px;
+  width: 86px;
+  height: 86px;
+  opacity: .08;
+  pointer-events: none;
+  background:
+    linear-gradient(45deg, transparent 44%, currentColor 44%, currentColor 56%, transparent 56%),
+    linear-gradient(-45deg, transparent 44%, currentColor 44%, currentColor 56%, transparent 56%);
+  background-size: 18px 18px;
+  border-radius: 14px;
+}
+
+@media (max-width: 700px) {
+  .mor-v5 .mor-discover-header {
+    padding: 18px 16px;
+  }
+
+  .mor-v5 .mor-v5-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+
+/* KPI clickable refinement */
+.mor-v5 .mor-v5-metric {
+  appearance: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background-color .18s ease;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+}
+
+.mor-v5 .mor-v5-metric:hover {
+  transform: translateY(-2px);
+  border-color: #bfd0e2;
+  box-shadow:
+    0 8px 24px rgba(23, 38, 60, .08);
+}
+
+.mor-v5 .mor-v5-metric.is-active {
+  border-color: #7ea2d3;
+  box-shadow:
+    0 0 0 3px rgba(126, 162, 211, .14),
+    0 10px 28px rgba(23, 38, 60, .10);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
+}
+
+.mor-v5 .mor-v5-metric.is-active::after {
+  content: "";
+  position: absolute;
+  inset: auto 16px 0 16px;
+  height: 3px;
+  border-radius: 999px 999px 0 0;
+  background: var(--mor-primary);
+}
+
+.mor-v5 .mor-v5-metric:focus-visible {
+  outline: 3px solid rgba(126, 162, 211, .35);
+  outline-offset: 2px;
+}
+
+.mor-v5 .mor-v5-metric-value {
+  margin-top: 2px;
+}
+
+.mor-v5 .mor-v5-metric-description {
+  line-height: 1.45;
+}
+
+.mor-v5 .mor-v5-metric-icon {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+}
+
+}

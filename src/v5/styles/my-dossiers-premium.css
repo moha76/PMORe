@@ -1,0 +1,258 @@
+@layer legacy {
+.m05-page {
+  max-width: 1380px;
+  margin: auto;
+  padding: 30px 28px 70px;
+  color: #143850;
+}
+
+.m05-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: white;
+  border: 1px solid #dce8f0;
+  border-radius: 18px;
+  padding: 30px 34px;
+  margin-bottom: 23px;
+}
+
+.m05-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #4880a3;
+}
+
+.m05-hero h1 {
+  margin: 10px 0;
+  font-size: clamp(28px, 3vw, 38px);
+  color: #073d60;
+}
+
+.m05-hero p {
+  margin: 0;
+  color: #698498;
+}
+
+.m05-refresh,
+.m05-toolbar button,
+.m05-pagination button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d7e5ee;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #235574;
+}
+
+.m05-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 13px;
+  margin-bottom: 24px;
+}
+
+.m05-stage-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 20px;
+  border: 1px solid #dae8f0;
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #47667a;
+}
+
+.m05-stage-card strong {
+  font-size: 29px;
+  line-height: 1;
+  color: #103e5f;
+}
+
+.m05-stage-card.is-selected {
+  border-color: #1974aa;
+  box-shadow: 0 0 0 2px rgba(25,116,170,.11);
+  background: #f4faff;
+}
+
+.m05-stage-card.is-won .m05-stage-icon {
+  color: #be881c;
+}
+
+.m05-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.m05-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  height: 45px;
+  background: white;
+  border: 1px solid #d7e5ee;
+  border-radius: 10px;
+}
+
+.m05-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+}
+
+.m05-list {
+  display: grid;
+  gap: 12px;
+}
+
+.m05-dossier {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 220px;
+  gap: 24px;
+  align-items: center;
+  padding: 23px 26px;
+  background: #fff;
+  border: 1px solid #dce8f0;
+  border-radius: 14px;
+}
+
+.m05-ref {
+  font-size: 11px;
+  font-weight: 800;
+  color: #417fa7;
+}
+
+.m05-dossier h2 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 9px 0 13px;
+}
+
+.m05-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 20px;
+  color: #688497;
+  font-size: 12px;
+}
+
+.m05-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.m05-dossier-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.m05-status {
+  border-radius: 7px;
+  background: #eaf3fa;
+  color: #23628b;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.m05-status-submitted {
+  background: #e7f5ef;
+  color: #19734f;
+}
+
+.m05-status-history {
+  background: #f0f2f5;
+  color: #66717c;
+}
+
+.m05-dossier-side small {
+  color: #73899a;
+}
+
+.m05-continue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #126a9e;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.m05-feedback {
+  text-align: center;
+  padding: 45px 20px;
+  background: white;
+  border: 1px solid #dce8f0;
+  border-radius: 12px;
+  color: #607c91;
+}
+
+.m05-feedback.is-error {
+  color: #a23c3c;
+}
+
+.m05-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+  color: #688397;
+  font-size: 12px;
+}
+
+.m05-pagination div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.m05-pagination button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .m05-stage-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .m05-dossier {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .m05-dossier-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .m05-page { padding: 18px 14px 45px; }
+  .m05-hero { padding: 22px; flex-direction: column; align-items: flex-start; }
+  .m05-stage-card { padding: 15px; }
+  .m05-toolbar { flex-direction: column; align-items: stretch; }
+  .m05-pagination { flex-direction: column; }
+}
+
+}

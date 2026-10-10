@@ -1,0 +1,46 @@
+@layer legacy {
+/* MOR Premium V5 — Design tokens */
+.mor-v5 {
+  --mor-primary: #193b68;
+  --mor-primary-hover: #102c50;
+  --mor-primary-soft: #eaf1f9;
+
+  --mor-bg: #f5f7fb;
+  --mor-surface: #ffffff;
+  --mor-surface-alt: #f8fafc;
+
+  --mor-text: #17263c;
+  --mor-text-secondary: #52647b;
+  --mor-text-muted: #68798d;
+
+  --mor-border: #dfe6ee;
+  --mor-border-strong: #c5d0dd;
+
+  --mor-success: #237450;
+  --mor-warning: #986414;
+  --mor-danger: #b43c42;
+  --mor-info: #255b9b;
+
+  --mor-radius-sm: 6px;
+  --mor-radius-md: 10px;
+  --mor-radius-lg: 14px;
+
+  --mor-space-1: 4px;
+  --mor-space-2: 8px;
+  --mor-space-3: 12px;
+  --mor-space-4: 16px;
+  --mor-space-5: 20px;
+  --mor-space-6: 24px;
+  --mor-space-8: 32px;
+
+  --mor-control-height: 40px;
+  --mor-shadow:
+    0 2px 12px rgba(23, 38, 60, .045);
+
+  color: var(--mor-text);
+  background: var(--mor-bg);
+  font-family: Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+}

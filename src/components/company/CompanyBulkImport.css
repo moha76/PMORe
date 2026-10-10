@@ -1,0 +1,168 @@
+@layer legacy {
+.mor-bulk-import {
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  gap: 22px;
+  color: #182d43;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.mor-bulk-import-header {
+  padding: 26px 30px;
+  background: #fff;
+  border: 1px solid #dce5ef;
+  border-radius: 16px;
+}
+
+.mor-bulk-kicker {
+  color: #176689;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+
+.mor-bulk-import h2 {
+  margin: 8px 0;
+  font-size: 26px;
+  color: #162e47;
+}
+
+.mor-bulk-import h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mor-bulk-import p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.mor-bulk-upload {
+  display: grid;
+  gap: 12px;
+  padding: 28px;
+  background: #f5f9fd;
+  border: 2px dashed #b8cede;
+  border-radius: 16px;
+}
+
+.mor-bulk-upload label {
+  font-weight: 750;
+  font-size: 17px;
+}
+
+.mor-bulk-upload input {
+  font-size: 15px;
+  max-width: 100%;
+}
+
+.mor-bulk-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mor-bulk-controls button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #125d83;
+  color: #fff;
+  font-weight: 750;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mor-bulk-controls button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.mor-bulk-results {
+  display: grid;
+  gap: 14px;
+}
+
+.mor-bulk-results-head,
+.mor-bulk-job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mor-bulk-job {
+  padding: 20px;
+  border: 1px solid #dbe5ed;
+  border-radius: 14px;
+  background: white;
+}
+
+.mor-bulk-job-head strong {
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.mor-bulk-job-head span {
+  font-size: 14px;
+  color: #365d76;
+}
+
+.mor-bulk-extraction {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.mor-bulk-extraction > div {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  background: #f4f8fc;
+  border-radius: 9px;
+}
+
+.mor-bulk-extraction span {
+  font-size: 13px;
+  color: #536c82;
+}
+
+.mor-bulk-extraction strong {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.mor-bulk-warnings {
+  grid-column: 1 / -1;
+}
+
+.mor-bulk-error {
+  color: #ad3131;
+}
+
+.mor-bulk-notice {
+  padding: 16px 20px;
+  border-left: 4px solid #237398;
+  background: #edf5fa;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media(max-width: 700px) {
+  .mor-bulk-extraction {
+    grid-template-columns: 1fr;
+  }
+
+  .mor-bulk-import-header,
+  .mor-bulk-upload {
+    padding: 20px;
+  }
+}
+
+}
