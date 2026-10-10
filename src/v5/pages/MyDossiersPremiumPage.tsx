@@ -3,6 +3,12 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
   ArrowRight,
+  Columns3,
+  List,
+  CalendarDays,
+  Clock3,
+  Layers3,
+  CheckCircle2,
   ArrowUpRight,
   FolderOpen,
   RefreshCw,
@@ -32,6 +38,7 @@ export function MyDossiersPremiumPage() {
   const [params, setParams] = useSearchParams();
   const stage = params.get("stage") || "ALL";
   const [search, setSearch] = useState("");
+  const view = params.get("view") === "list" ? "list" : "board";
   const raw = Number(params.get("page") || 1);
   const page = Number.isFinite(raw) && raw > 0 ? Math.floor(raw) : 1;
   const query = useQuery({
@@ -54,36 +61,75 @@ export function MyDossiersPremiumPage() {
   }
   return (
     <main className="premium-dossiers">
-      <PageHeading
-        eyebrow="VOTRE ESPACE DE PARTICIPATION"
-        title="Chaque dossier, son prochain mouvement."
-        description="De l'étude au suivi, retrouvez vos participations et reprenez le travail au bon endroit."
-        actions={
-          <Link className="premium-btn primary" to="/v5/discover">
-            Découvrir un marché <ArrowUpRight size={16} />
-          </Link>
-        }
-      />
-      <div className="dossiers-intro">
-        <FolderOpen size={23} />
-        <div>
-          <strong>
-            {query.data?.total ?? "—"} participations enregistrées
-          </strong>
-          <p>
-            Consultations et lots sont distingués. Les dépôts affichés sont vos
-            déclarations dans MOR.
-          </p>
+      <div className="dossier-command">
+        <PageHeading
+          eyebrow="VOTRE ESPACE DE PARTICIPATION"
+          title="Chaque dossier, son prochain mouvement."
+          description="De l'étude au suivi, retrouvez vos participations et reprenez le travail au bon endroit."
+          actions={
+            <Link className="premium-btn primary" to="/v5/discover">
+              Découvrir un marché <ArrowUpRight size={16} />
+            </Link>
+          }
+        />
+        <div className="dossier-command-summary">
+          <Layers3 size={28} />
+          <strong>{query.data?.total ?? "—"}</strong>
+          <span>
+            participations
+            <br />
+            enregistrées
+          </span>
+          <button
+            className="premium-icon-btn"
+            aria-label="Actualiser les dossiers"
+            disabled={query.isFetching}
+            onClick={() => void query.refetch()}
+          >
+            <RefreshCw size={18} />
+          </button>
         </div>
-        <button
-          className="premium-icon-btn"
-          aria-label="Actualiser les dossiers"
-          disabled={query.isFetching}
-          onClick={() => void query.refetch()}
-        >
-          <RefreshCw size={17} />
-        </button>
       </div>
+      <div
+        className="mission-overview"
+        aria-label="Répartition des dossiers sur la page chargée"
+      >
+        {stages
+          .filter((s) =>
+            ["STUDY", "PREPARATION", "PRE_SUBMISSION", "SUBMITTED"].includes(
+              s.key,
+            ),
+          )
+          .map((s, i) => (
+            <button
+              key={s.key}
+              className={`mission-overview-item mission-${s.key.toLowerCase()} ${stage === s.key ? "active" : ""}`}
+              aria-pressed={stage === s.key}
+              onClick={() => update("stage", stage === s.key ? "ALL" : s.key)}
+            >
+              <span className="mission-number">0{i + 1}</span>
+              <span>
+                <strong>{s.label}</strong>
+                <small>
+                  {
+                    [
+                      "Construire la décision",
+                      "Assembler les pièces",
+                      "Préparer le dépôt externe",
+                      "Retrouver les déclarations",
+                    ][i]
+                  }
+                </small>
+              </span>
+              <b>{items.filter((x) => x.stage === s.key).length}</b>
+              <ArrowUpRight size={17} />
+            </button>
+          ))}
+      </div>
+      <p className="mission-scope">
+        <CheckCircle2 size={15} /> Consultations et lots distincts · Compteurs
+        sur la page chargée · Dépôts déclarés dans MOR
+      </p>
       <section className="discover-register">
         <nav className="dossier-stage-nav" aria-label="Filtrer les missions">
           {stages.map((s) => (
@@ -112,7 +158,26 @@ export function MyDossiersPremiumPage() {
               placeholder="Rechercher un dossier, une référence, un acheteur…"
             />
           </label>
-          <small>Filtres et compteurs sur la page chargée</small>
+          <div
+            className="dossier-view-switch"
+            role="group"
+            aria-label="Présentation des dossiers"
+          >
+            <button
+              aria-pressed={view === "board"}
+              onClick={() => update("view", "board")}
+            >
+              <Columns3 size={17} />
+              Par étapes
+            </button>
+            <button
+              aria-pressed={view === "list"}
+              onClick={() => update("view", "list")}
+            >
+              <List size={17} />
+              Liste
+            </button>
+          </div>
         </div>
         {query.isPending ? (
           <div className="premium-empty" role="status">
@@ -141,6 +206,89 @@ export function MyDossiersPremiumPage() {
             <Link className="premium-btn primary" to="/v5/discover">
               Explorer les marchés <ArrowRight size={16} />
             </Link>
+          </div>
+        ) : view === "board" ? (
+          <div className="mission-board">
+            {stages
+              .filter(
+                (s) =>
+                  s.key !== "ALL" &&
+                  (stage !== "ALL"
+                    ? s.key === stage
+                    : s.key !== "HISTORY" &&
+                      (s.key !== "WON" ||
+                        filtered.some((d) => d.stage === "WON"))),
+              )
+              .map((s) => {
+                const entries = filtered.filter((d) => d.stage === s.key);
+                return (
+                  <section
+                    key={s.key}
+                    className={`mission-column mission-${s.key.toLowerCase()}`}
+                    aria-label={`${s.label} : ${entries.length} dossiers`}
+                  >
+                    <header>
+                      <span className="mission-column-dot" />
+                      <h2>{s.label}</h2>
+                      <span>{entries.length}</span>
+                    </header>
+                    <div className="mission-column-body">
+                      {entries.map((d) => (
+                        <article
+                          key={`${d.ref_consultation}/${d.org_acronyme}/${d.lot_number}`}
+                          className="mission-card"
+                        >
+                          <div className="mission-card-ref">
+                            <span>{d.reference || d.ref_consultation}</span>
+                            <span>
+                              {d.lot_number === "GLOBAL"
+                                ? "Marché entier"
+                                : d.lot_number
+                                  ? `Lot ${d.lot_number}`
+                                  : "Consultation"}
+                            </span>
+                          </div>
+                          <Link
+                            className="mission-card-title"
+                            to={dossierDestination(d)}
+                          >
+                            {d.title || "Intitulé indisponible"}
+                          </Link>
+                          <p>{d.buyer || "Acheteur non renseigné"}</p>
+                          <div className="mission-card-date">
+                            <CalendarDays size={15} />
+                            <span>
+                              Date limite{" "}
+                              <strong>{dateLabel(d.deadline)}</strong>
+                            </span>
+                          </div>
+                          <footer>
+                            <span>
+                              <Clock3 size={13} />{" "}
+                              {dateLabel(
+                                d.stage === "SUBMITTED"
+                                  ? d.submitted_at
+                                  : d.last_modified_at,
+                              )}
+                            </span>
+                            <Link
+                              to={dossierDestination(d)}
+                              aria-label={`Reprendre ${d.reference || d.ref_consultation}${d.lot_number ? ` lot ${d.lot_number}` : ""}`}
+                            >
+                              Reprendre <ArrowRight size={15} />
+                            </Link>
+                          </footer>
+                        </article>
+                      ))}
+                      {!entries.length && (
+                        <p className="mission-column-empty">
+                          Aucun dossier à cette étape sur la page chargée.
+                        </p>
+                      )}
+                    </div>
+                  </section>
+                );
+              })}
           </div>
         ) : (
           <div className="premium-table-scroll">

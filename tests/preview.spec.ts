@@ -137,15 +137,13 @@ test("lot context, decision, sourced qualification, PDF review and external subm
   await page
     .getByRole("button", { name: "Pièces et contrôle", exact: false })
     .click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "exemple.pdf",
-      mimeType: "application/pdf",
-      buffer: Buffer.from(
-        "%PDF-1.4\n%Exemple de document, sans valeur officielle\n%%EOF",
-      ),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "exemple.pdf",
+    mimeType: "application/pdf",
+    buffer: Buffer.from(
+      "%PDF-1.4\n%Exemple de document, sans valeur officielle\n%%EOF",
+    ),
+  });
   await page
     .getByRole("button", { name: "Déposer une nouvelle version" })
     .click();
@@ -225,4 +223,38 @@ test("connected mode shows failure instead of fabricated records", async ({
   ).toBeVisible();
   await expect(page.locator("tbody tr")).toHaveCount(0);
   await expect(page.locator(".demo-notice")).not.toBeVisible();
+});
+
+test("dossier board, stage filtering and list preserve the lot destination", async ({
+  page,
+}) => {
+  await page.goto("v5/mes-dossiers?demo=1");
+  await expect(
+    page.getByRole("button", { name: "Par étapes", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".mission-card")).toHaveCount(1);
+  await page
+    .getByRole("textbox", { name: "Rechercher dans les dossiers chargés" })
+    .fill("introuvable");
+  await expect(
+    page.getByRole("heading", { name: "Aucun dossier dans cette sélection." }),
+  ).toBeVisible();
+  await page
+    .getByRole("textbox", { name: "Rechercher dans les dossiers chargés" })
+    .fill("");
+  await page.getByRole("button", { name: "Liste", exact: true }).click();
+  await expect(page).toHaveURL(/view=list/);
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await page.reload();
+  await expect(
+    page.getByRole("button", { name: "Liste", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "Par étapes", exact: true }).click();
+  await page
+    .locator(".mission-overview-item.mission-preparation")
+    .click();
+  await expect(page.locator(".mission-column")).toHaveCount(1);
+  const card = page.locator(".mission-card").filter({ hasText: "Lot 1" });
+  await card.getByRole("link", { name: /Reprendre/ }).click();
+  await expect(page).toHaveURL(/v5\/prepare\/DEMO-001\/DEMO\/1/);
 });

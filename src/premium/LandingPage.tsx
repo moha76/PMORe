@@ -139,17 +139,17 @@ export function LandingPage() {
                   <path
                     d="M32 0H0V32"
                     fill="none"
-                    stroke="#b7c5ac"
+                    stroke="#ccdafb"
                     strokeWidth=".5"
                   />
                 </pattern>
                 <linearGradient id="radar-sweep">
-                  <stop stopColor="#b4c996" stopOpacity=".3" />
-                  <stop offset="1" stopColor="#b4c996" stopOpacity="0" />
+                  <stop stopColor="#779bff" stopOpacity=".3" />
+                  <stop offset="1" stopColor="#779bff" stopOpacity="0" />
                 </linearGradient>
               </defs>
               <rect width="520" height="510" fill="url(#radar-grid)" />
-              <g fill="none" stroke="#b8c5ab" strokeWidth="1">
+              <g fill="none" stroke="#c4d2f2" strokeWidth="1">
                 <circle cx="270" cy="260" r="80" />
                 <circle cx="270" cy="260" r="150" />
                 <circle cx="270" cy="260" r="220" />
@@ -161,17 +161,17 @@ export function LandingPage() {
               />
               <path
                 d="M315 64l37 12 12 38-18 23-2 28-31 25-3 30-27 34-10 35-32 31-17 39-22 17-5 44-39 33-48 5-14-25 30-26 15-31 13-8 19-34 13-16 13-42 22-20 17-48 21-24 20-18 19-20Z"
-                fill="#dde5d0"
-                stroke="#486746"
+                fill="#e3ebff"
+                stroke="#2454dc"
                 strokeWidth="1.5"
               />
-              <g fill="#214c3b" stroke="#eff1e6" strokeWidth="5">
+              <g fill="#2454dc" stroke="#fff" strokeWidth="5">
                 <circle cx="300" cy="164" r="7" />
                 <circle cx="272" cy="221" r="8" />
                 <circle cx="249" cy="272" r="6" />
               </g>
               <g
-                fill="#304e37"
+                fill="#203657"
                 fontFamily="Geist Variable, sans-serif"
                 fontSize="11"
               >

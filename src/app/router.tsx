@@ -1,4 +1,3 @@
-const LegacyStyles = lazy(() => import("../premium/LegacyStyles"));
 import { LandingPage } from "../premium/LandingPage";
 import { lazy, Suspense } from "react";
 
@@ -7,6 +6,8 @@ import { createBrowserRouter, useLocation } from "react-router-dom";
 import { AppShell } from "../components/AppShell";
 
 import { LoginPage } from "../pages/LoginPage";
+
+const LegacyStyles = lazy(() => import("../premium/LegacyStyles"));
 
 const OpportunityWorkspacePage = lazy(() =>
   import("../pages/OpportunityWorkspacePage").then((module) => ({

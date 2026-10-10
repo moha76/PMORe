@@ -3,10 +3,13 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
   ArrowDownUp,
-  ArrowRight,
+  Compass,
   ArrowUpRight,
   Building2,
-  Compass,
+  Radar,
+  ShieldCheck,
+  ScanLine,
+  ShieldAlert,
   ListFilter,
   MapPin,
   RefreshCw,
@@ -16,6 +19,7 @@ import {
 } from "lucide-react";
 import { getOpportunities } from "../../api/opportunities";
 import type { OpportunityFilters } from "../../api/types";
+import { PortfolioPulse } from "../../premium/PortfolioPulse";
 import { PageHeading } from "../../premium/PageHeading";
 import { dateLabel } from "../../premium/format";
 import { DeadlineStatus } from "../components/DeadlineStatus";
@@ -86,58 +90,72 @@ export function DiscoverPage() {
       value: totalQuery.data?.meta.pagination.total,
       key: "",
       desc: "Dans votre recherche",
+      Icon: Radar,
     },
     {
       label: "Sans réserve détectée",
       value: summary?.ok,
       key: "OK",
       desc: "À étudier avant de décider",
+      Icon: ShieldCheck,
     },
     {
       label: "Points à vérifier",
       value: summary?.verify,
       key: "VERIFY",
       desc: "Une lecture complémentaire",
+      Icon: ScanLine,
     },
     {
       label: "Obstacles identifiés",
       value: summary?.blocking,
       key: "BLOCKING",
       desc: "Conditions à examiner",
+      Icon: ShieldAlert,
     },
   ];
   return (
     <main className="premium-discover">
-      <PageHeading
-        eyebrow="01 / DÉCOUVRIR"
-        title="Votre prochain marché commence ici."
-        description="Repérez les opportunités. Comparez les conditions. Choisissez celles qui méritent votre attention."
-        actions={
-          <button
-            className="premium-btn outline"
-            onClick={() => {
-              void query.refetch();
-              void totalQuery.refetch();
-            }}
-            disabled={query.isFetching}
-          >
-            <RefreshCw
-              size={15}
-              className={query.isFetching ? "is-spinning" : ""}
-            />
-            Actualiser
-          </button>
-        }
-      />
+      <div className="market-command">
+        <PageHeading
+          eyebrow="01 / DÉCOUVRIR"
+          title="Votre prochain marché commence ici."
+          description="Repérez les opportunités. Comparez les conditions. Choisissez celles qui méritent votre attention."
+          actions={
+            <button
+              className="premium-btn outline"
+              onClick={() => {
+                void query.refetch();
+                void totalQuery.refetch();
+              }}
+              disabled={query.isFetching}
+            >
+              <RefreshCw
+                size={15}
+                className={query.isFetching ? "is-spinning" : ""}
+              />
+              Actualiser
+            </button>
+          }
+        />
+        <PortfolioPulse
+          summary={summary}
+          loading={query.isPending}
+          failed={query.isError}
+        />
+      </div>
       <div className="discover-overview">
         <div className="discover-stats" aria-label="Repères des marchés">
           {stats.map((s, i) => (
             <button
               key={s.label}
-              className={`discover-stat ${matching === s.key ? "selected" : ""}`}
+              className={`discover-stat stat-${i} ${matching === s.key ? "selected" : ""}`}
               aria-pressed={matching === s.key}
               onClick={() => update("matching", s.key)}
             >
+              <span className="stat-icon">
+                <s.Icon size={22} />
+              </span>
               <span>
                 <span className={`stat-marker marker-${i}`} />
                 {s.label}
@@ -151,23 +169,6 @@ export function DiscoverPage() {
               <small>{s.desc}</small>
             </button>
           ))}
-        </div>
-        <div className="discover-profile-note">
-          <span className="profile-note-icon">
-            <Compass size={24} />
-          </span>
-          <strong>
-            Le bon marché
-            <br />
-            pour votre entreprise.
-          </strong>
-          <p>
-            Votre profil donne du contexte
-            <br />à chaque correspondance.
-          </p>
-          <Link to="/company">
-            Affiner mon profil <ArrowRight size={14} />
-          </Link>
         </div>
       </div>
       <section
@@ -206,7 +207,7 @@ export function DiscoverPage() {
             <Search size={18} />
             <input
               aria-label="Rechercher des marchés"
-              placeholder="Objet, référence ou acheteur…"
+              placeholder="Rechercher un marché, une référence, un acheteur…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />

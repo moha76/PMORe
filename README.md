@@ -31,12 +31,12 @@ Le commutateur existant `VITE_PREPARE_V5_ENABLED=true` active la préparation co
 
 ## Ce qui a changé
 
-- Logo SVG MOR proposé, Geist et Manrope locales, palette encre/ivoire/vert, icônes Lucide.
+- Logo SVG MOR proposé, Geist et Manrope locales, palette blanc/cobalt, chiffres en bleu nuit, icônes Lucide.
 - Landing éditoriale dédiée à `/`, distincte du travail applicatif.
 - Navigation desktop/mobile commune : Découvrir, Mes dossiers, Intelligence marché, Mon entreprise.
 - Parcours Étudier/Préparer/Soumettre/Suivre, avec lot conservé dans l'URL. Les étapes consultées ne sont plus affichées comme des réalisations métier.
-- Nouveau registre Découvrir, filtres partageables, tableau desktop et liste mobile, erreurs et inconnus explicites.
-- Mes dossiers organise les participations par mission. Les filtres/compteurs locaux sont clairement distingués du total serveur.
+- Nouveau registre Découvrir avec lecture graphique des états de matching, filtres partageables, tableau desktop et liste mobile, erreurs et inconnus explicites.
+- Mes dossiers propose un tableau par étapes et une liste, avec recherche, filtres et présentation conservée dans l’URL. Les filtres/compteurs locaux sont clairement distingués du total serveur.
 - Préparer met le registre et l'inspecteur côte à côte ; la synthèse détaillée s'ouvre à la demande.
 - Soumettre conserve la déclaration de dépôt **externe**, ses révisions et son historique ; annulation dans un dialogue accessible.
 - Entreprise place sa navigation avant les métriques, réservées à la vue d'ensemble. Les formulaires et ressources existants sont conservés.
@@ -52,8 +52,18 @@ La recette locale ne certifie pas les permissions, les sauvegardes, les téléch
 
 ## Preuves et tests
 
-Les tests Playwright vérifient le rendu desktop/mobile, les débordements et les erreurs JavaScript, les scans axe WCAG A/AA, les filtres, le lot, la décision, la qualification sourcée, le téléversement et contrôle PDF, la déclaration/annulation et les dialogues clavier. Chromium système est utilisé lorsqu'il existe ; `MOR_BROWSER_PATH` peut indiquer un autre chemin. À défaut, installer le navigateur Playwright avec `npx playwright install chromium`.
+Les tests Playwright vérifient le rendu desktop/mobile, les débordements et les erreurs JavaScript, les scans axe WCAG A/AA, les filtres, le lot, la décision, la qualification sourcée, le téléversement et contrôle PDF, la déclaration/annulation et les dialogues clavier et le passage tableau par étapes/liste. Chromium système est utilisé lorsqu'il existe ; `MOR_BROWSER_PATH` peut indiquer un autre chemin. À défaut, installer le navigateur Playwright avec `npx playwright install chromium`.
 
 Les résultats de chaque exécution vont dans `artifacts/test-results.json`, les captures dans `artifacts/screenshots/` et les diagnostics d'accessibilité dans `artifacts/accessibility/`. Les échecs conservent une trace dans `test-results/`. Ces sorties sont ignorées par Git.
 
 Le rapport d'audit initial est `/workspace/MOR_AUDIT_ET_PROPOSITION.md`. Les preuves visuelles destinées à la revue sont dans `/workspace/mor-evidence`. La refonte reste à valider par le commanditaire avant de la considérer comme terminée.
+
+## Direction financière — deuxième proposition
+
+Après revue, la première proposition a été jugée trop discrète. La direction retenue par le commanditaire est blanc et cobalt, style financier. Le fichier `src/premium/finance.css` définit cette présentation, chargé après les bases fonctionnelles pour préserver les anciennes interfaces sans utiliser `!important`.
+
+Découvrir sépare la lecture du matching, les filtres rapides et le registre. Le graphique est calculé à partir des compteurs reçus ; la fraîcheur est signalée séparément car elle peut recouper un état de matching. Aucune tendance historique ou progression inventée n'est affichée.
+
+Mes dossiers dispose de cartes par mission et d'une liste accessible, conservée dans `view=list` dans l'URL. Les compteurs portent toujours sur la page chargée. Aucun changement de mission par glisser-déposer n'est proposé : les transitions restent déterminées par les règles existantes.
+
+La landing, la navigation commune et les espaces d'étude, de préparation et de dépôt reprennent cette direction. La seconde proposition reste soumise à validation visuelle et à recette sur un backend de test autorisé.
