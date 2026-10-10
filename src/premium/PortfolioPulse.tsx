@@ -1,5 +1,9 @@
+import { useId, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ChartNoAxesCombined } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
+
+import { MorIntelligence as ChartNoAxesCombined } from "./MorIcons";
+import { Zellij } from "./Zellij";
 
 type Summary = {
   ok: number;
@@ -18,28 +22,42 @@ export function PortfolioPulse({
   loading: boolean;
   failed: boolean;
 }) {
+  const [expanded, setExpanded] = useState(
+    () => window.matchMedia("(min-width: 761px)").matches,
+  );
+  const contentId = `matching-${useId().replace(/:/g, "")}`;
   const groups = [
-    { label: "Sans réserve", value: summary?.ok ?? 0, color: "#78a1ff" },
+    { label: "Sans réserve", value: summary?.ok ?? 0, color: "#a6c8ad" },
     {
       label: "À vérifier / partiels",
       value: (summary?.verify ?? 0) + (summary?.partial ?? 0),
-      color: "#ffd37a",
+      color: "#dbb77b",
     },
-    { label: "Obstacles", value: summary?.blocking ?? 0, color: "#fb8f9e" },
-    { label: "État inconnu", value: summary?.unknown ?? 0, color: "#a5b3cf" },
+    { label: "Obstacles", value: summary?.blocking ?? 0, color: "#ebaa99" },
+    { label: "État inconnu", value: summary?.unknown ?? 0, color: "#bbb9ac" },
   ];
   const total = groups.reduce((sum, group) => sum + group.value, 0);
   let offset = 0;
   return (
     <aside className="portfolio-pulse" aria-label="Lecture du portefeuille">
+      <Zellij className="pulse-zellij" />
       <div className="pulse-heading">
         <span>
           <ChartNoAxesCombined size={18} />
-          LECTURE DU PORTEFEUILLE
+          VOTRE LECTURE DU MARCHÉ
         </span>
-        <span>MOR / MATCHING</span>
+        <button
+          className="pulse-toggle"
+          aria-label="Afficher la répartition du matching"
+          aria-expanded={expanded}
+          aria-controls={contentId}
+          onClick={() => setExpanded(!expanded)}
+        >
+          <span>MOR / MATCHING</span>
+          <ChevronDown size={15} />
+        </button>
       </div>
-      <div className="pulse-content">
+      <div className="pulse-content" id={contentId} hidden={!expanded}>
         <div className="pulse-chart">
           <svg viewBox="0 0 120 120" aria-hidden="true">
             <circle
@@ -100,7 +118,9 @@ export function PortfolioPulse({
             ? "Lecture indisponible"
             : loading
               ? "Lecture en cours…"
-              : `Répartition du matching · ${summary?.stale ?? 0} obsolète(s)`}
+              : summary
+                ? `Matching · ${summary.stale} analyse(s) à actualiser`
+                : "Matching non renseigné"}
         </span>
         <Link to="/company">
           Mon profil <ArrowUpRight size={15} />

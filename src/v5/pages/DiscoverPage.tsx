@@ -6,10 +6,6 @@ import {
   Compass,
   ArrowUpRight,
   Building2,
-  Radar,
-  ShieldCheck,
-  ScanLine,
-  ShieldAlert,
   ListFilter,
   MapPin,
   RefreshCw,
@@ -17,6 +13,12 @@ import {
   SlidersHorizontal,
   X,
 } from "lucide-react";
+import {
+  MorRadar as Radar,
+  MorVerified as ShieldCheck,
+  MorReview as ScanLine,
+  MorObstacle as ShieldAlert,
+} from "../../premium/MorIcons";
 import { getOpportunities } from "../../api/opportunities";
 import type { OpportunityFilters } from "../../api/types";
 import { PortfolioPulse } from "../../premium/PortfolioPulse";
@@ -119,7 +121,7 @@ export function DiscoverPage() {
       <div className="market-command">
         <PageHeading
           eyebrow="01 / DÉCOUVRIR"
-          title="Votre prochain marché commence ici."
+          title="Vos marchés. Votre prochain mouvement."
           description="Repérez les opportunités. Comparez les conditions. Choisissez celles qui méritent votre attention."
           actions={
             <button

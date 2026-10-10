@@ -250,11 +250,29 @@ test("dossier board, stage filtering and list preserve the lot destination", asy
     page.getByRole("button", { name: "Liste", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Par étapes", exact: true }).click();
-  await page
-    .locator(".mission-overview-item.mission-preparation")
-    .click();
+  await page.locator(".mission-overview-item.mission-preparation").click();
   await expect(page.locator(".mission-column")).toHaveCount(1);
   const card = page.locator(".mission-card").filter({ hasText: "Lot 1" });
   await card.getByRole("link", { name: /Reprendre/ }).click();
   await expect(page).toHaveURL(/v5\/prepare\/DEMO-001\/DEMO\/1/);
+});
+
+test("mobile portfolio analysis opens without changing the opportunity selection", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("v5/discover?demo=1");
+  const toggle = page.getByRole("button", {
+    name: "Afficher la répartition du matching",
+  });
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator(".pulse-chart")).not.toBeVisible();
+  await expect(page.locator("tbody tr")).toHaveCount(6);
+  await toggle.click();
+  await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  await expect(page.locator(".pulse-chart")).toBeVisible();
+  await expect(page.locator("tbody tr")).toHaveCount(6);
+  await expect(page).toHaveURL(/v5\/discover\?demo=1$/);
+  await toggle.click();
+  await expect(page.locator(".pulse-chart")).not.toBeVisible();
 });

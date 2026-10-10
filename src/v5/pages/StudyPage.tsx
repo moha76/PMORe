@@ -1,3 +1,4 @@
+import { MorLot as Layers3 } from "../../premium/MorIcons";
 import { dateLabel } from "../../premium/format"
 import { useState } from "react"
 import { useParams, useSearchParams } from "react-router-dom"
@@ -6,7 +7,7 @@ import {
   ArrowUpRight, AlertTriangle, CheckCircle2,
   ClipboardList, FileSearch, FileText, ShieldAlert,
   Wallet, ChevronRight, CalendarDays, Building2,
-  RefreshCw, ListFilter, Info, Layers3, Banknote,
+  RefreshCw, ListFilter, Info, Banknote,
 } from "lucide-react"
 import { getOpportunityDetail, getLotDecisions } from "../../api/opportunities"
 import { EvidenceDrawer } from "../../components/opportunity/EvidenceDrawer"

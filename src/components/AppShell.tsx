@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import {
-  ArrowUpRight,
-  Building2,
-  Compass,
-  FolderOpen,
-  Menu,
-  PanelLeftClose,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, Menu, PanelLeftClose, X } from "lucide-react";
 import { getCompanyRematchStatus } from "../api/company";
 import { MissionJourney } from "../v5/components/MissionJourney";
+import {
+  MorRadar as Compass,
+  MorCompany as Building2,
+  MorDossier as FolderOpen,
+  MorIntelligence as Sparkles,
+} from "../premium/MorIcons";
+import { Zellij } from "../premium/Zellij";
 import { Brand } from "../premium/Brand";
 import { affectedByCompanyChange } from "../premium/cache";
 import { demoEnabled, leaveDemo } from "../premium/demo";
@@ -85,6 +83,7 @@ export function AppShell() {
         id="main-navigation"
         className={`premium-sidebar ${open ? "is-open" : ""}`}
       >
+        <Zellij className="sidebar-zellij" />
         <Link className="sidebar-brand" to="/">
           <Brand compact={collapsed} />
         </Link>

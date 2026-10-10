@@ -15,7 +15,7 @@ import { router } from "./app/router";
 
 import "./premium/premium.css";
 import "./premium/workspaces.css";
-import "./premium/finance.css";
+import "./premium/morocco.css";
 
 installDemoTransport();
 

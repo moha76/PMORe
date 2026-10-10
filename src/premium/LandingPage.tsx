@@ -6,15 +6,13 @@ import {
   ArrowUpRight,
   Check,
   ChevronRight,
-  FileCheck2,
   Fingerprint,
-  Layers3,
   MapPin,
   Menu,
-  SearchCheck,
-  ShieldCheck,
   X,
 } from "lucide-react";
+import { Zellij } from "./Zellij";
+import { MorRadar, MorLot, MorDossier, MorVerified } from "./MorIcons";
 import { Brand } from "./Brand";
 export function LandingPage() {
   const [menu, setMenu] = useState(false);
@@ -28,25 +26,25 @@ export function LandingPage() {
       name: "Découvrir",
       title: "Le bon marché commence par le bon regard.",
       copy: "Comparez les consultations, les échéances et leur correspondance avec votre entreprise. Vous choisissez celles qui méritent une étude.",
-      icon: SearchCheck,
+      icon: MorRadar,
     },
     {
       name: "Étudier",
       title: "Une décision, avec ses preuves.",
       copy: "Examinez les conditions du DCE, les montants et les points à vérifier. Chaque lot garde son périmètre et votre décision.",
-      icon: Layers3,
+      icon: MorLot,
     },
     {
       name: "Préparer",
       title: "Chaque exigence trouve sa place.",
       copy: "Qualifiez les exigences, réunissez les versions documentaires et consignez leur contrôle. Les réserves restent visibles.",
-      icon: FileCheck2,
+      icon: MorDossier,
     },
     {
       name: "Soumettre & suivre",
       title: "La trace de chaque mouvement.",
       copy: "Après votre dépôt sur le portail externe, déclarez-le dans MOR et retrouvez l'historique de votre participation.",
-      icon: ShieldCheck,
+      icon: MorVerified,
     },
   ];
   return (
@@ -123,78 +121,30 @@ export function LandingPage() {
               <span>LE TERRITOIRE DES POSSIBLES</span>
               <span>01 / MOR</span>
             </div>
-            <svg
-              className="radar-svg"
-              viewBox="0 0 520 510"
+            <div
+              className="mor-hero-art"
               role="img"
-              aria-label="Illustration abstraite du radar MOR au Maroc, sans données géographiques de marché"
+              aria-label="Composition géométrique de zellij dessinée pour MOR, illustration sans données de marché"
             >
-              <defs>
-                <pattern
-                  id="radar-grid"
-                  width="32"
-                  height="32"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M32 0H0V32"
-                    fill="none"
-                    stroke="#ccdafb"
-                    strokeWidth=".5"
-                  />
-                </pattern>
-                <linearGradient id="radar-sweep">
-                  <stop stopColor="#779bff" stopOpacity=".3" />
-                  <stop offset="1" stopColor="#779bff" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <rect width="520" height="510" fill="url(#radar-grid)" />
-              <g fill="none" stroke="#c4d2f2" strokeWidth="1">
-                <circle cx="270" cy="260" r="80" />
-                <circle cx="270" cy="260" r="150" />
-                <circle cx="270" cy="260" r="220" />
-                <path d="M270 20v470M30 260h480" strokeDasharray="4 8" />
-              </g>
-              <path
-                d="M270 260L490 260A220 220 0 0 0 374 66Z"
-                fill="url(#radar-sweep)"
-              />
-              <path
-                d="M315 64l37 12 12 38-18 23-2 28-31 25-3 30-27 34-10 35-32 31-17 39-22 17-5 44-39 33-48 5-14-25 30-26 15-31 13-8 19-34 13-16 13-42 22-20 17-48 21-24 20-18 19-20Z"
-                fill="#e3ebff"
-                stroke="#2454dc"
-                strokeWidth="1.5"
-              />
-              <g fill="#2454dc" stroke="#fff" strokeWidth="5">
-                <circle cx="300" cy="164" r="7" />
-                <circle cx="272" cy="221" r="8" />
-                <circle cx="249" cy="272" r="6" />
-              </g>
-              <g
-                fill="#203657"
-                fontFamily="Geist Variable, sans-serif"
-                fontSize="11"
-              >
-                <text x="318" y="168">
-                  RABAT
-                </text>
-                <text x="289" y="225">
-                  CASABLANCA
-                </text>
-                <text x="266" y="276">
-                  MARRAKECH
-                </text>
-                <text x="24" y="486" fontSize="9">
-                  REPRÉSENTATION ILLUSTRATIVE
-                </text>
-                <text x="437" y="486" fontSize="9">
-                  30° / 08°
-                </text>
-              </g>
-            </svg>
+              <Zellij className="hero-zellij" />
+              <div className="mor-hero-seal">
+                <MorRadar size={104} />
+                <span>
+                  AU CŒUR
+                  <br />
+                  DE VOTRE DÉCISION.
+                </span>
+              </div>
+              <span className="mor-art-index art-index-top">
+                01 / LE SIGNAL
+              </span>
+              <span className="mor-art-index art-index-bottom">
+                02 / LA PREUVE
+              </span>
+            </div>
             <div className="radar-card">
               <span className="radar-card-icon">
-                <SearchCheck size={22} />
+                <MorRadar size={22} />
               </span>
               <div>
                 <small>DE L'OPPORTUNITÉ À L'ACTION</small>
@@ -221,15 +171,15 @@ export function LandingPage() {
             <strong>LES DÉCISIONS QUI ENGAGENT.</strong>
           </span>
           <div>
-            <Layers3 size={20} />
+            <MorLot size={20} />
             Un périmètre par lot
           </div>
           <div>
-            <FileCheck2 size={20} />
+            <MorDossier size={20} />
             Des preuves consultables
           </div>
           <div>
-            <ShieldCheck size={20} />
+            <MorVerified size={20} />
             Une validation humaine
           </div>
         </div>
@@ -395,7 +345,7 @@ export function LandingPage() {
                     <strong>Obligatoire</strong>
                   </div>
                   <div className="example-document">
-                    <FileCheck2 size={24} />
+                    <MorDossier size={24} />
                     <span>
                       Qualifier · Téléverser · Contrôler
                       <small>Chaque version conserve sa trace.</small>
@@ -409,7 +359,7 @@ export function LandingPage() {
                     <span className="status-pill neutral">Non déclaré</span>
                   </div>
                   <div className="example-document">
-                    <ShieldCheck size={24} />
+                    <MorVerified size={24} />
                     <span>
                       Votre déclaration, dans MOR
                       <small>
@@ -450,12 +400,12 @@ export function LandingPage() {
             </div>
             <div>
               <span>02</span>
-              <Layers3 size={19} />
+              <MorLot size={19} />
               Vos capacités & justificatifs
             </div>
             <div>
               <span>03</span>
-              <SearchCheck size={19} />
+              <MorRadar size={19} />
               Les conditions du marché
             </div>
             <p>

@@ -31,7 +31,7 @@ Le commutateur existant `VITE_PREPARE_V5_ENABLED=true` active la préparation co
 
 ## Ce qui a changé
 
-- Logo SVG MOR proposé, Geist et Manrope locales, palette blanc/cobalt, chiffres en bleu nuit, icônes Lucide.
+- Logo SVG MOR proposé, Geist et Manrope locales, palette vert profond/ivoire, huit icônes métier MOR en SVG, Lucide pour les commandes usuelles.
 - Landing éditoriale dédiée à `/`, distincte du travail applicatif.
 - Navigation desktop/mobile commune : Découvrir, Mes dossiers, Intelligence marché, Mon entreprise.
 - Parcours Étudier/Préparer/Soumettre/Suivre, avec lot conservé dans l'URL. Les étapes consultées ne sont plus affichées comme des réalisations métier.
@@ -60,10 +60,20 @@ Le rapport d'audit initial est `/workspace/MOR_AUDIT_ET_PROPOSITION.md`. Les pre
 
 ## Direction financière — deuxième proposition
 
-Après revue, la première proposition a été jugée trop discrète. La direction retenue par le commanditaire est blanc et cobalt, style financier. Le fichier `src/premium/finance.css` définit cette présentation, chargé après les bases fonctionnelles pour préserver les anciennes interfaces sans utiliser `!important`.
+Après revue, la première proposition a été jugée trop discrète. La direction retenue par le commanditaire est blanc et cobalt, style financier. Cette deuxième proposition est conservée dans l’historique Git et dans ses archives. Sa feuille de style a depuis été remplacée par `src/premium/morocco.css` pour la direction marocaine validée par le commanditaire.
 
 Découvrir sépare la lecture du matching, les filtres rapides et le registre. Le graphique est calculé à partir des compteurs reçus ; la fraîcheur est signalée séparément car elle peut recouper un état de matching. Aucune tendance historique ou progression inventée n'est affichée.
 
 Mes dossiers dispose de cartes par mission et d'une liste accessible, conservée dans `view=list` dans l'URL. Les compteurs portent toujours sur la page chargée. Aucun changement de mission par glisser-déposer n'est proposé : les transitions restent déterminées par les règles existantes.
 
-La landing, la navigation commune et les espaces d'étude, de préparation et de dépôt reprennent cette direction. La seconde proposition reste soumise à validation visuelle et à recette sur un backend de test autorisé.
+La landing, la navigation commune et les espaces d'étude, de préparation et de dépôt reprennent cette direction. La recette sur un backend de test autorisé reste nécessaire.
+
+## Signature marocaine — proposition actuelle
+
+La palette choisie est vert profond et ivoire. Le zellij est dessiné en vectoriel autour d’une étoile à huit pointes et d’une trame entrelacée, réutilisée dans le monogramme, la navigation et les panneaux de lecture. La landing présente cette composition originale plutôt qu’une carte géographique décorative. Le motif est tenu à distance des tableaux et des formulaires.
+
+La famille métier est dans `src/premium/MorIcons.tsx` : radar, dossier, intelligence, entreprise, conformité, vérification, obstacle et lot. Grille 24 px, épaisseur constante 1,65 px, SVG adaptables. Les fichiers indépendants se trouvent dans `public/mor-icons/` ; le motif dans `public/mor-zellij.svg` et le monogramme dans `public/mor-mark.svg`. Les contrôles standard conservent les icônes Lucide.
+
+Les synthèses ont été resserrées pour placer le registre plus haut. Sur mobile, la répartition du matching est fermée à l’ouverture et se déplie sans modifier la recherche. La vue des missions et les décisions par lot sont préservées. Les données montrées dans les captures restent des exemples explicitement fictifs.
+
+Cette proposition marocaine attend la validation visuelle du commanditaire. Elle n’a pas été déployée et ne certifie pas la recette avec le backend réel.

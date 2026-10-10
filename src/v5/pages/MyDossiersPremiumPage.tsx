@@ -7,13 +7,14 @@ import {
   List,
   CalendarDays,
   Clock3,
-  Layers3,
   CheckCircle2,
   ArrowUpRight,
   FolderOpen,
   RefreshCw,
   Search,
 } from "lucide-react";
+import { MorLot as Layers3 } from "../../premium/MorIcons";
+import { Zellij } from "../../premium/Zellij";
 import { getDossiersV5, dossierDestination } from "../../api/dossiersV5";
 import { PageHeading } from "../../premium/PageHeading";
 import { dateLabel } from "../../premium/format";
@@ -64,7 +65,7 @@ export function MyDossiersPremiumPage() {
       <div className="dossier-command">
         <PageHeading
           eyebrow="VOTRE ESPACE DE PARTICIPATION"
-          title="Chaque dossier, son prochain mouvement."
+          title="Chaque participation, une décision à mener."
           description="De l'étude au suivi, retrouvez vos participations et reprenez le travail au bon endroit."
           actions={
             <Link className="premium-btn primary" to="/v5/discover">
@@ -73,6 +74,7 @@ export function MyDossiersPremiumPage() {
           }
         />
         <div className="dossier-command-summary">
+          <Zellij className="summary-zellij" />
           <Layers3 size={28} />
           <strong>{query.data?.total ?? "—"}</strong>
           <span>
